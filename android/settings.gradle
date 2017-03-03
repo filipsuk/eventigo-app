@@ -1,0 +1,3 @@
+rootProject.name = 'eventigoApp'
+
+include ':app'
