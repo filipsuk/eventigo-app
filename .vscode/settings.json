@@ -1,3 +1,5 @@
 {
-    "vsicons.presets.angular": false
+    "vsicons.presets.angular": false,
+    "flow.pathToFlow": "node_modules/.bin/flow",
+    "javascript.validate.enable": false
 }
