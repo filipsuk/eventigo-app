@@ -1,5 +1,6 @@
 {
     "vsicons.presets.angular": false,
+    "javascript.validate.enable": false,
     "flow.pathToFlow": "node_modules/.bin/flow",
-    "javascript.validate.enable": false
+    "flow.useNPMPackagedFlow": true
 }

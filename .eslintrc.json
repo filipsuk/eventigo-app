@@ -10,8 +10,13 @@
     "jasmine": true
   },
 
+  "extends": [
+    "plugin:flowtype/recommended"
+  ],
+
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ],
 
   // Map from global var to bool specifying if it can be redefined
@@ -76,6 +81,13 @@
   },
 
   "rules": {
+  // Custom rules 
+    "indent": ["error", 2],
+
+  //Flow
+    "flowtype/space-after-type-colon": [ 2, "always", { "allowLineBreak": false } ], 
+
+  // React Native repo rules
     "comma-dangle": 0,               // disallow trailing commas in object literals
     "no-cond-assign": 1,             // disallow assignment in conditional expressions
     "no-console": 0,                 // disallow use of console (off by default in the node environment)
