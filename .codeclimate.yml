@@ -9,8 +9,8 @@ ratings:
   - "src/**/*"
 
 exclude_paths:
-- ".vscode/"
-- "android/"
-- "ios/"
-- "flow-typed/"
-- "node_modules/"
+  - ".vscode/"
+  - "android/"
+  - "ios/"
+  - "flow-typed/"
+  - "node_modules/"
