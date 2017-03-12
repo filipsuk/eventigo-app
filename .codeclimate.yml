@@ -1,0 +1,6 @@
+exclude_paths:
+- ".vscode/"
+- "android/"
+- "ios/"
+- "flow-typed/"
+- "node_modules/"
