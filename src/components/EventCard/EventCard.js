@@ -14,7 +14,7 @@ type Props = {
 
 const EventCard = ({event}: Props) => (
     <Image source={{uri: event.image}} style={styles.image}>
-      <EventHeader title={event.name} date={event.start} />
+      <EventHeader event={event} />
     </Image>
 );
 
