@@ -39,7 +39,39 @@ const mockedEvents: Event[] = [
     url: 'https://example.org',
     start: 'Sobota 1. 4.',
     end: '2. 4.',
-    image: 'https://i.imgsafe.org/a5b1b555fc.png'
+    image: 'https://i.imgsafe.org/a5b1b555fc.png',
+    tags: [
+      {
+        id: 1,
+        rate: 3,
+        name: 'Programování',
+        code: 'programovani'
+      },
+      {
+        id: 2,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 3,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 5,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 6,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+    ]
   },
   {
     id: 1,
