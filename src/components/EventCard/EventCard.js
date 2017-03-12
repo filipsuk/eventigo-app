@@ -6,16 +6,15 @@ import {
   StyleSheet
  } from 'react-native';
 import EventHeader from '../EventHeader';
+import type { Event } from '../../types';
 
 type Props = {
-  title: string,
-  date: string,
-  imageUri: string
+  event: Event
 }
 
-const Event = ({title, date, imageUri}: Props) => (
-    <Image source={{uri: imageUri}} style={styles.image}>
-      <EventHeader title={title} date={date} />
+const EventCard = ({event}: Props) => (
+    <Image source={{uri: event.image}} style={styles.image}>
+      <EventHeader title={event.name} date={event.start} />
     </Image>
 );
 
@@ -27,4 +26,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Event;
+export default EventCard;

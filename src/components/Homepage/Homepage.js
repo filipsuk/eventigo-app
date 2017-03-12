@@ -3,7 +3,9 @@
 import React from 'react';
 import { View, StatusBar } from 'react-native';
 import type {NavigationScreenOptions} from 'react-navigation/src/TypeDefinition.js';
-import Event from '../Event';
+import EventCard from '../EventCard';
+
+import type { Event } from '../../types';
 
 class Homepage extends React.PureComponent {
   static navigationOptions: NavigationScreenOptions = {
@@ -20,13 +22,42 @@ class Homepage extends React.PureComponent {
     return (
       <View>
         <StatusBar barStyle="light-content" />
-        <Event title="Devel 2017" date="Sobota 1. 4. 2017" imageUri="https://i.imgsafe.org/a5b1b555fc.png" />
-        <Event title="Machine Learning Prague 2017" date="Pátek 21.4. – 23. 4. 2017" imageUri="https://i.imgsafe.org/5c2b9b62ae.png" />
-        <Event title="Wisephora" date="Středa 31. 5. 2017" imageUri="https://i.imgsafe.org/e89935b30c.png" />
+        <EventCard event={mockedEvents[0]} />
+        <EventCard event={mockedEvents[1]} />
+        <EventCard event={mockedEvents[2]} />
       </View>
     );
   }
 
 }
+
+const mockedEvents: Event[] = [
+  {
+    id: 1,
+    name: 'Devel 2017',
+    description: 'Lorem ipsum',
+    url: 'https://example.org',
+    start: 'Sobota 1. 4.',
+    end: '2. 4.',
+    image: 'https://i.imgsafe.org/a5b1b555fc.png'
+  },
+  {
+    id: 1,
+    name: 'Machine Learning Prague 2017',
+    description: 'Lorem ipsum',
+    url: 'https://example.org',
+    start: 'Pátek 21. 4.',
+    end: '23. 4.',
+    image: 'https://i.imgsafe.org/5c2b9b62ae.png'
+  },
+  {
+    id: 1,
+    name: 'Wisephora',
+    description: 'Lorem ipsum',
+    url: 'https://example.org',
+    start: 'Pátek 21. 4.',
+    image: 'https://i.imgsafe.org/e89935b30c.png'
+  }
+];
 
 export default Homepage;
