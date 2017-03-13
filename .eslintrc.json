@@ -1,8 +1,10 @@
 {
   "parser": "babel-eslint",
 
-  "ecmaFeatures": {
-    "jsx": true
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
 
   "env": {
