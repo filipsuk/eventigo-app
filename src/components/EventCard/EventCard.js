@@ -13,9 +13,9 @@ type Props = {
 }
 
 const EventCard = ({event}: Props) => (
-    <Image source={{uri: event.image}} style={styles.image}>
-      <EventHeader event={event} />
-    </Image>
+  <Image source={{uri: event.image}} style={styles.image}>
+    <EventHeader event={event} />
+  </Image>
 );
 
 const styles = StyleSheet.create({
