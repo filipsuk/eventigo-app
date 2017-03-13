@@ -86,6 +86,10 @@
   // Custom rules 
     "indent": ["error", 2], // indent with 2 spaces
     "react/jsx-indent": [2, 2],
+    "array-bracket-spacing": [ "off", [ ] ],
+    "object-curly-spacing": [ "error", "always" ],
+    "quote-props": [ "error", "as-needed", { "keywords": true } ],
+
   //Flow
     "flowtype/space-after-type-colon": [ 2, "always", { "allowLineBreak": false } ], 
 
@@ -109,7 +113,6 @@
     "no-negated-in-lhs": 1,          // disallow negation of the left operand of an in expression
     "no-obj-calls": 1,               // disallow the use of object properties of the global object (Math and JSON) as functions
     "no-regex-spaces": 1,            // disallow multiple spaces in a regular expression literal
-    "no-reserved-keys": 0,           // disallow reserved words being used as object literal keys (off by default)
     "no-sparse-arrays": 1,           // disallow sparse arrays
     "no-unreachable": 1,             // disallow unreachable statements after a return, throw, continue, or break statement
     "use-isnan": 1,                  // disallow comparisons with the value NaN
@@ -216,10 +219,8 @@
     "no-underscore-dangle": 0,       // disallow dangling underscores in identifiers
     "no-mixed-spaces-and-tabs": 1,   // disallow mixed spaces and tabs for indentation
     "quotes": [1, "single", "avoid-escape"], // specify whether double or single quotes should be used
-    "quote-props": 0,                // require quotes around object literal property names (off by default)
     "semi": 1,                       // require or disallow use of semicolons instead of ASI
     "sort-vars": 0,                  // sort variables within the same declaration block (off by default)
-    "space-in-brackets": 0,          // require or disallow spaces inside brackets (off by default)
     "space-in-parens": 0,            // require or disallow spaces inside parentheses (off by default)
     "space-infix-ops": 1,            // require spaces around operators
     "space-unary-ops": [1, { "words": true, "nonwords": false }], // require or disallow spaces before/after unary operators (words on by default, nonwords off by default)

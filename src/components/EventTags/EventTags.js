@@ -10,7 +10,7 @@ type Props = {
   tags?: EventTag[]
 }
 
-const EventTags = ({tags}: Props) => {
+const EventTags = ({ tags }: Props) => {
   if (!tags) {
     return null;
   }

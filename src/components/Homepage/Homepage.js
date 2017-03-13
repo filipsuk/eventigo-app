@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { View, StatusBar } from 'react-native';
-import type {NavigationScreenOptions} from 'react-navigation/src/TypeDefinition.js';
+import type { NavigationScreenOptions } from 'react-navigation/src/TypeDefinition.js';
 import EventCard from '../EventCard';
 
 import type { Event } from '../../types';
