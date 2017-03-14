@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet
  } from 'react-native';
+import { fontSizes } from '../../styles';
 import type { EventTag } from '../../types';
 
 type Props = {
@@ -28,7 +29,7 @@ const EventTags = ({ tags }: Props) => {
 const styles = StyleSheet.create({
   tags: {
     color: '#ACACAC',
-    fontSize: 11,
+    fontSize: fontSizes.smaller,
   }
 });
 

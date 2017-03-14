@@ -80,7 +80,39 @@ const mockedEvents: Event[] = [
     url: 'https://example.org',
     start: 'Pátek 21. 4.',
     end: '23. 4.',
-    image: 'https://i.imgsafe.org/5c2b9b62ae.png'
+    image: 'https://i.imgsafe.org/5c2b9b62ae.png',
+    tags: [
+      {
+        id: 1,
+        rate: 3,
+        name: 'Programování',
+        code: 'programovani'
+      },
+      {
+        id: 2,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 3,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 5,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 6,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+    ]
   },
   {
     id: 1,
@@ -88,7 +120,39 @@ const mockedEvents: Event[] = [
     description: 'Lorem ipsum',
     url: 'https://example.org',
     start: 'Pátek 21. 4.',
-    image: 'https://i.imgsafe.org/e89935b30c.png'
+    image: 'https://i.imgsafe.org/e89935b30c.png',
+    tags: [
+      {
+        id: 1,
+        rate: 3,
+        name: 'Programování',
+        code: 'programovani'
+      },
+      {
+        id: 2,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 3,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 5,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+      {
+        id: 6,
+        rate: 5,
+        name: 'Konference',
+        code: 'konference'
+      },
+    ]
   }
 ];
 
