@@ -18,7 +18,7 @@ const EventHeader = ({ event }: Props) => (
       <Text style={styles.title} numberOfLines={3} ellipsizeMode="tail">
         {event.name}
       </Text>
-      <EventTags tags={event.tags} />
+      <EventTags tags={event.tags} numberOfLines={1} />
     </View>
   </LinearGradient>
 );

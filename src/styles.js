@@ -14,6 +14,7 @@ const fontSizes: { [sizeName: string]: number } = {
 
 const colors = {
   white: '#FFF',
+  dark: '#2E4147',
   darkBlue: '#162B33'
 };
 
