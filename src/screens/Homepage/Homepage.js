@@ -5,7 +5,7 @@ import { View, StatusBar } from 'react-native';
 import type {
   NavigationScreenOptions
 } from 'react-navigation/src/TypeDefinition.js';
-import EventCard from '../EventCard';
+import EventCard from '../../components/EventCard';
 import { navigationHeader } from '../../styles';
 
 import type { Event } from '../../types';

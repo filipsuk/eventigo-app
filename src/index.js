@@ -1,8 +1,8 @@
 /* @flow */
 
 import { AppRegistry } from 'react-native';
-import Homepage from './components/Homepage';
-import EventDetail from './components/EventDetail';
+import Homepage from './screens/Homepage';
+import EventDetail from './screens/EventDetail';
 import { StackNavigator } from 'react-navigation';
 
 const EventigoApp = StackNavigator({
