@@ -5,15 +5,21 @@ import { fontSizes } from '../../styles';
 import type { EventTag } from '../../types';
 
 type Props = {
-  tags?: EventTag[]
+  tags?: EventTag[],
+  style?: any,
+  numberOfLines?: number
 };
 
-const EventTags = ({ tags }: Props) => {
+const EventTags = ({ tags, style, numberOfLines }: Props) => {
   if (!tags) {
     return null;
   }
   return (
-    <Text style={styles.tags} numberOfLines={1} ellipsizeMode="tail">
+    <Text
+      style={[styles.tags, style]}
+      numberOfLines={numberOfLines}
+      ellipsizeMode="tail"
+    >
       {tags.map(tag => {
         return <Text key={tag.id}>#{tag.code} </Text>;
       })}
