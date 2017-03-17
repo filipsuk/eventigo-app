@@ -5,7 +5,7 @@ import Homepage from './components/Homepage';
 import { StackNavigator } from 'react-navigation';
 
 const EventigoApp = StackNavigator({
-  Home: { screen: Homepage },
+  Home: { screen: Homepage }
 });
 
 export default EventigoApp;

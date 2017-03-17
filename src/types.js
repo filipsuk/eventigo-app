@@ -8,12 +8,12 @@ export type Event = {
   start: string,
   end?: string,
   image: string,
-  tags?: EventTag[],
-}
+  tags?: EventTag[]
+};
 
 export type EventTag = {
   id: number,
   rate: 1 | 2 | 3 | 4 | 5, // 1: weak, 5: strong relation
   name: string,
-  code: string,
-}
+  code: string
+};
