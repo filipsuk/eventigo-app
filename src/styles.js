@@ -12,4 +12,14 @@ const fontSizes: { [sizeName: string]: number } = {
   smaller: fontSizeBase * 0.79
 };
 
-export { fontSizes };
+const colors = {
+  white: '#FFF',
+  darkBlue: '#162B33'
+};
+
+const navigationHeader = {
+  headerTintColor: colors.white,
+  headerBackgroundColor: colors.darkBlue
+};
+
+export { fontSizes, colors, navigationHeader };
