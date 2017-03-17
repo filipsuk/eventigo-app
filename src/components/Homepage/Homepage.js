@@ -6,6 +6,7 @@ import type {
   NavigationScreenOptions
 } from 'react-navigation/src/TypeDefinition.js';
 import EventCard from '../EventCard';
+import { navigationHeader } from '../../styles';
 
 import type { Event } from '../../types';
 
@@ -13,20 +14,25 @@ class Homepage extends React.PureComponent {
   static navigationOptions: NavigationScreenOptions = {
     title: 'eventigo.cz',
     header: {
-      tintColor: '#EFEFF4',
+      backTitle: null,
+      tintColor: navigationHeader.headerTintColor,
       style: {
-        backgroundColor: '#162B33'
+        backgroundColor: navigationHeader.headerBackgroundColor
       }
     }
+  };
+
+  handleEventPress = (event: Event) => {
+    this.props.navigation.navigate('Detail', { event });
   };
 
   render() {
     return (
       <View>
         <StatusBar barStyle="light-content" />
-        <EventCard event={mockedEvents[0]} />
-        <EventCard event={mockedEvents[1]} />
-        <EventCard event={mockedEvents[2]} />
+        <EventCard event={mockedEvents[0]} onPress={this.handleEventPress} />
+        <EventCard event={mockedEvents[1]} onPress={this.handleEventPress} />
+        <EventCard event={mockedEvents[2]} onPress={this.handleEventPress} />
       </View>
     );
   }
