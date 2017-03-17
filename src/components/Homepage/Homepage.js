@@ -2,7 +2,9 @@
 
 import React from 'react';
 import { View, StatusBar } from 'react-native';
-import type { NavigationScreenOptions } from 'react-navigation/src/TypeDefinition.js';
+import type {
+  NavigationScreenOptions
+} from 'react-navigation/src/TypeDefinition.js';
 import EventCard from '../EventCard';
 
 import type { Event } from '../../types';
@@ -28,7 +30,6 @@ class Homepage extends React.PureComponent {
       </View>
     );
   }
-
 }
 
 const mockedEvents: Event[] = [
@@ -70,7 +71,7 @@ const mockedEvents: Event[] = [
         rate: 5,
         name: 'Konference',
         code: 'konference'
-      },
+      }
     ]
   },
   {
@@ -111,7 +112,7 @@ const mockedEvents: Event[] = [
         rate: 5,
         name: 'Konference',
         code: 'konference'
-      },
+      }
     ]
   },
   {
@@ -151,7 +152,7 @@ const mockedEvents: Event[] = [
         rate: 5,
         name: 'Konference',
         code: 'konference'
-      },
+      }
     ]
   }
 ];

@@ -2,5 +2,6 @@
     "vsicons.presets.angular": false,
     "javascript.validate.enable": false,
     "flow.pathToFlow": "node_modules/.bin/flow",
-    "flow.useNPMPackagedFlow": true
+    "flow.useNPMPackagedFlow": true,
+    "prettier.singleQuote": true
 }

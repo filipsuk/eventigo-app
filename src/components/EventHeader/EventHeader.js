@@ -1,10 +1,6 @@
 /* @flow */
 import React from 'react';
-import {
-  Text,
-  View,
-  StyleSheet
- } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import EventTags from '../EventTags';
 import LinearGradient from 'react-native-linear-gradient';
 import { fontSizes } from '../../styles';
@@ -13,13 +9,15 @@ import type { Event } from '../../types';
 
 type Props = {
   event: Event
-}
+};
 
 const EventHeader = ({ event }: Props) => (
-  <LinearGradient colors={['transparent', 'rgba(0, 0, 0, 0.9)',]}>
+  <LinearGradient colors={['transparent', 'rgba(0, 0, 0, 0.9)']}>
     <View style={styles.container}>
       <Text style={styles.date}>{event.start}</Text>
-      <Text style={styles.title} numberOfLines={3} ellipsizeMode="tail">{event.name}</Text>
+      <Text style={styles.title} numberOfLines={3} ellipsizeMode="tail">
+        {event.name}
+      </Text>
       <EventTags tags={event.tags} />
     </View>
   </LinearGradient>
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingBottom: 7,
     paddingTop: 30,
-    backgroundColor: 'transparent',
+    backgroundColor: 'transparent'
   },
   title: {
     color: '#FFFFFF',
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.small,
     fontWeight: '300',
     ...textShadow
-  },
+  }
 });
 
 export default EventHeader;
