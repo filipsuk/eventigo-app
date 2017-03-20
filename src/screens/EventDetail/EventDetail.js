@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { View, ScrollView, Text, Image, StyleSheet } from 'react-native';
+import { Button, Grid, Col } from 'react-native-elements';
 import EventTags from '../../components/EventTags';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 
@@ -42,6 +43,24 @@ class EventDetail extends React.Component {
           </Text>
           <Text style={styles.date}>{event.start}</Text>
           <EventTags tags={event.tags} style={styles.tags} />
+          <Grid containerStyle={styles.buttons}>
+            <Col>
+              <Button
+                icon={{ name: 'open-in-new', type: 'material-community' }}
+                title="OTEVŘÍT"
+                buttonStyle={styles.button}
+                backgroundColor={colors.secondary}
+              />
+            </Col>
+            <Col>
+              <Button
+                icon={{ name: 'calendar-plus', type: 'material-community' }}
+                title="ULOŽIT"
+                buttonStyle={styles.button}
+                backgroundColor={colors.secondary}
+              />
+            </Col>
+          </Grid>
           <Text style={styles.description}>{event.description}</Text>
         </View>
       </ScrollView>
@@ -76,6 +95,15 @@ const styles = StyleSheet.create({
   description: {
     color: colors.dark,
     marginVertical: 5
+  },
+  buttons: {
+    marginHorizontal: -5,
+    marginVertical: 5
+  },
+  button: {
+    marginLeft: 5,
+    marginRight: 5,
+    borderRadius: 3
   }
 });
 

@@ -15,7 +15,11 @@ const fontSizes: { [sizeName: string]: number } = {
 const colors = {
   white: '#FFF',
   dark: '#2E4147',
-  darkBlue: '#162B33'
+  darkBlue: '#162B33',
+  primary: '#5BADF2',
+  secondary: '#319F97',
+  highlight: '#FED02F',
+  danger: '#DB4141'
 };
 
 const navigationHeader = {
