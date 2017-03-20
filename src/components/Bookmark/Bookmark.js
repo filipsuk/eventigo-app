@@ -2,7 +2,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import type { Event } from '../../types';
 import { colors } from '../../styles';
 
 type Props = {
