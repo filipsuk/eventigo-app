@@ -5,7 +5,7 @@ import { ScrollView, StatusBar } from 'react-native';
 import type {
   NavigationScreenOptions
 } from 'react-navigation/src/TypeDefinition.js';
-import EventCard from '../../components/EventCard';
+import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
 import { mockedEvents } from '../../mocks/mockedEvents';
 
@@ -34,9 +34,7 @@ class Homepage extends React.PureComponent {
     return (
       <ScrollView>
         <StatusBar barStyle="light-content" />
-        <EventCard event={mockedEvents[0]} onPress={this.handleEventPress} />
-        <EventCard event={mockedEvents[1]} onPress={this.handleEventPress} />
-        <EventCard event={mockedEvents[2]} onPress={this.handleEventPress} />
+        <EventList events={mockedEvents} onEventPress={this.handleEventPress} />
       </ScrollView>
     );
   }
