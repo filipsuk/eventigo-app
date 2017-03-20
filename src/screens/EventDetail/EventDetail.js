@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Button, Grid, Col } from 'react-native-elements';
 import EventTags from '../../components/EventTags';
+import EventDate from '../../components/EventDate';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 
 import type { Event } from '../../types';
@@ -76,7 +77,7 @@ class EventDetail extends React.Component {
           <Text style={styles.title}>
             {event.name}
           </Text>
-          <Text style={styles.date}>{event.start}</Text>
+          <EventDate event={event} style={styles.date} />
           <EventTags tags={event.tags} style={styles.tags} />
           <Grid containerStyle={styles.buttons}>
             <Col>

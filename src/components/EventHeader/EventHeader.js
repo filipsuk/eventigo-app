@@ -2,6 +2,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import EventTags from '../EventTags';
+import EventDate from '../EventDate';
 import LinearGradient from 'react-native-linear-gradient';
 import { fontSizes } from '../../styles';
 
@@ -11,17 +12,19 @@ type Props = {
   event: Event
 };
 
-const EventHeader = ({ event }: Props) => (
-  <LinearGradient colors={['transparent', 'rgba(0, 0, 0, 0.9)']}>
-    <View style={styles.container}>
-      <Text style={styles.date}>{event.start}</Text>
-      <Text style={styles.title} numberOfLines={3} ellipsizeMode="tail">
-        {event.name}
-      </Text>
-      <EventTags tags={event.tags} numberOfLines={1} />
-    </View>
-  </LinearGradient>
-);
+const EventHeader = ({ event }: Props) => {
+  return (
+    <LinearGradient colors={['transparent', 'rgba(0, 0, 0, 0.9)']}>
+      <View style={styles.container}>
+        <EventDate event={event} style={styles.date} />
+        <Text style={styles.title} numberOfLines={3} ellipsizeMode="tail">
+          {event.name}
+        </Text>
+        <EventTags tags={event.tags} numberOfLines={1} />
+      </View>
+    </LinearGradient>
+  );
+};
 
 const textShadow = {
   textShadowColor: '#000000',
@@ -34,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
     paddingBottom: 7,
-    paddingTop: 30,
+    paddingTop: 70,
     backgroundColor: 'transparent'
   },
   title: {
