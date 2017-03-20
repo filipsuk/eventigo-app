@@ -13,6 +13,7 @@ import {
 import { Button, Grid, Col } from 'react-native-elements';
 import EventTags from '../../components/EventTags';
 import EventDate from '../../components/EventDate';
+import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 
 import type { Event } from '../../types';
@@ -72,7 +73,14 @@ class EventDetail extends React.Component {
 
     return (
       <ScrollView>
-        <Image source={{ uri: event.image }} style={styles.image} />
+        <Image source={{ uri: event.image }} style={styles.image}>
+          <Bookmark
+            active={false}
+            containerStyle={styles.bookmark}
+            size={30}
+            onPress={() => console.log(`bookmarked event id ${event.id}`)}
+          />
+        </Image>
         <View style={styles.body}>
           <Text style={styles.title}>
             {event.name}
@@ -142,6 +150,11 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     borderRadius: 3
+  },
+  bookmark: {
+    position: 'absolute',
+    right: 0,
+    top: -4
   }
 });
 

@@ -50,7 +50,7 @@ const mockedEvents: Event[] = [
     url: 'https://example.org',
     start: '2017-04-26T10:00+01:00',
     end: '2017-04-27T10:00+01:00',
-    image: 'https://i.imgsafe.org/5c2b9b62ae.png',
+    image: 'https://i.imgsafe.org/030bbc1041.jpg',
     tags: [
       {
         id: 1,
