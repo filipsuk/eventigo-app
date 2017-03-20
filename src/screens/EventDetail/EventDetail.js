@@ -1,7 +1,15 @@
 /* @flow */
 
 import React from 'react';
-import { View, ScrollView, Text, Image, StyleSheet } from 'react-native';
+import {
+  View,
+  ScrollView,
+  Text,
+  Image,
+  StyleSheet,
+  Linking,
+  Alert
+} from 'react-native';
 import { Button, Grid, Col } from 'react-native-elements';
 import EventTags from '../../components/EventTags';
 import { navigationHeader, fontSizes, colors } from '../../styles';
@@ -31,6 +39,33 @@ class EventDetail extends React.Component {
     }
   };
 
+  /**
+  * Open URL in browser
+  */
+  static openUrl(url: string): void {
+    // TODO: if facebook, open in app with uri like fb://event?id=258779314553712
+    Linking.canOpenURL(url).then(supported => {
+      if (supported) {
+        Linking.openURL(url).catch(err => {
+          console.error('Error opening link:', err);
+          Alert.alert('Chyba', `Nepodařilo se otevřít url ${url}`);
+        });
+      } else {
+        console.error("Don't know how to open URI: " + url);
+        Alert.alert('Chyba', `Nepodařilo se otevřít url ${url}`);
+      }
+    });
+  }
+
+  handleOpen = () => {
+    const { url } = this.props.navigation.state.params.event;
+    EventDetail.openUrl(url);
+  };
+
+  handleAddToCalendar = () => {
+    Alert.alert('Není zatím implementováno');
+  };
+
   render() {
     const { event } = this.props.navigation.state.params;
 
@@ -46,7 +81,8 @@ class EventDetail extends React.Component {
           <Grid containerStyle={styles.buttons}>
             <Col>
               <Button
-                icon={{ name: 'open-in-new', type: 'material-community' }}
+                onPress={this.handleOpen}
+                icon={{ name: 'external-link', type: 'font-awesome' }}
                 title="OTEVŘÍT"
                 buttonStyle={styles.button}
                 backgroundColor={colors.secondary}
@@ -54,7 +90,8 @@ class EventDetail extends React.Component {
             </Col>
             <Col>
               <Button
-                icon={{ name: 'calendar-plus', type: 'material-community' }}
+                onPress={this.handleAddToCalendar}
+                icon={{ name: 'calendar-plus-o', type: 'font-awesome' }}
                 title="ULOŽIT"
                 buttonStyle={styles.button}
                 backgroundColor={colors.secondary}

@@ -88,7 +88,7 @@ const mockedEvents: Event[] = [
     id: 1,
     name: 'Wisephora',
     description: 'Lorem ipsum',
-    url: 'https://example.org',
+    url: 'https://www.facebook.com/events/258779314553712/',
     start: 'Pátek 21. 4.',
     image: 'https://i.imgsafe.org/e89935b30c.png',
     tags: [
