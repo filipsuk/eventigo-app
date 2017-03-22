@@ -8,13 +8,21 @@ import type { Event } from '../../types';
 
 type Props = {
   event: Event,
-  onPress?: (Event) => any
+  bookmarked: boolean,
+  onPress?: (Event) => any,
+  onBookmarkPress?: (number) => any
 };
 
-const EventCard = ({ event, onPress }: Props) => {
+const EventCard = ({ event, bookmarked, onPress, onBookmarkPress }: Props) => {
   const handlePress = () => {
     if (onPress) {
       onPress(event);
+    }
+  };
+
+  const handleBookmarkPress = () => {
+    if (onBookmarkPress) {
+      onBookmarkPress(event.id);
     }
   };
 
@@ -22,10 +30,10 @@ const EventCard = ({ event, onPress }: Props) => {
     <TouchableHighlight onPress={handlePress}>
       <Image source={{ uri: event.image }} style={styles.image}>
         <Bookmark
-          active={false}
+          active={bookmarked}
           containerStyle={styles.bookmark}
           size={30}
-          onPress={() => console.log(`bookmarked event id ${event.id}`)}
+          onPress={handleBookmarkPress}
         />
         <EventHeader event={event} />
       </Image>

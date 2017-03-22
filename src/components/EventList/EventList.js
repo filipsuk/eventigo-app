@@ -3,19 +3,30 @@ import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import EventCard from '../../components/EventCard';
 import type { Event } from '../../types';
+import type { BookmarksState } from '../../reducers/bookmarks';
 
 type Props = {
   events: Event[],
-  onEventPress: Function
+  bookmarks?: BookmarksState,
+  onEventPress: (Event) => any,
+  onBookmarkPress: (number) => any
 };
 
-const EventList = ({ events, onEventPress }: Props) => {
+const EventList = (
+  { events, bookmarks = {}, onEventPress, onBookmarkPress }: Props
+) => {
   // TODO: Use FlatList after upgrade to RN 0.43
   return (
     <ScrollView style={styles.container}>
       {events.map(event => {
         return (
-          <EventCard event={event} onPress={onEventPress} key={event.id} />
+          <EventCard
+            event={event}
+            bookmarked={bookmarks[event.id.toString()] || false}
+            onPress={onEventPress}
+            onBookmarkPress={onBookmarkPress}
+            key={event.id}
+          />
         );
       })}
     </ScrollView>
