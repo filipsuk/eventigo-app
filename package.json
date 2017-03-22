@@ -22,7 +22,9 @@
     "react-native-elements": "^0.10.0",
     "react-native-linear-gradient": "^2.0.0",
     "react-native-vector-icons": "^4.0.0",
-    "react-navigation": "^1.0.0-beta.7"
+    "react-navigation": "^1.0.0-beta.7",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -38,7 +40,8 @@
     "jest": "19.0.2",
     "lint-staged": "^3.4.0",
     "prettier": "^0.22.0",
-    "react-test-renderer": "~15.4.1"
+    "react-test-renderer": "~15.4.1",
+    "redux-devtools-extension": "^2.13.0"
   },
   "jest": {
     "preset": "react-native"
