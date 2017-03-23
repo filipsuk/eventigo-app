@@ -4,7 +4,6 @@ import React from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
-import { mockedEvents } from '../../mocks/mockedEvents';
 
 import type { Event } from '../../types';
 import type {
@@ -14,8 +13,10 @@ import type {
   NavigationScreenProp
 } from 'react-navigation/src/TypeDefinition.js';
 import type { BookmarksState } from '../../reducers/bookmarks';
+import type { EventsState } from '../../reducers/events';
 
 type Props = {
+  events: EventsState,
   bookmarks: BookmarksState,
   onBookmarkPress: (string) => any,
   navigation: NavigationScreenProp<NavigationState, NavigationAction>
@@ -52,7 +53,7 @@ class Homepage extends React.Component {
       <ScrollView>
         <StatusBar barStyle="light-content" />
         <EventList
-          events={mockedEvents}
+          events={this.props.events}
           bookmarks={this.props.bookmarks}
           onEventPress={this.handleEventPress}
           onBookmarkPress={this.props.onBookmarkPress}
