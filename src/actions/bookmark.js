@@ -1,6 +1,6 @@
 /* @flow */
 import { TOGGLE_BOOKMARK } from './constants';
-import type { Action } from './types';
+import type { Action } from '../types/actions';
 
 function toggleBookmark(id: string): Action {
   return {

@@ -3,7 +3,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import moment from 'moment';
 import { capitalize } from '../../utils';
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 
 type Props = {
   event: Event,

@@ -5,7 +5,7 @@ import { ScrollView, StatusBar } from 'react-native';
 import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
 
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 import type {
   NavigationScreenOptions,
   NavigationState,
