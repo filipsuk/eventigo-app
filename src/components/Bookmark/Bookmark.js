@@ -6,7 +6,7 @@ import { colors } from '../../styles';
 
 type Props = {
   active: boolean,
-  onPress?: (number) => any,
+  onPress?: Function,
   size?: number,
   containerStyle?: any
 };

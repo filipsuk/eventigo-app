@@ -10,7 +10,7 @@ type Props = {
   event: Event,
   bookmarked: boolean,
   onPress?: (Event) => any,
-  onBookmarkPress?: (number) => any
+  onBookmarkPress?: (string) => any
 };
 
 const EventCard = ({ event, bookmarked, onPress, onBookmarkPress }: Props) => {
