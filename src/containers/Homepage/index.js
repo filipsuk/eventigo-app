@@ -5,6 +5,7 @@ import { toggleBookmark } from '../../actions/bookmark';
 
 const mapStateToProps: mapStateToProps = state => {
   return {
+    events: state.events,
     bookmarks: state.bookmarks
   };
 };
