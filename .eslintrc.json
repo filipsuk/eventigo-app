@@ -92,7 +92,7 @@
       "error",
       {
         "singleQuote": true,
-        "tralingComma": false
+        "trailingComma": "none"
       }
     ],
     // React Native repo rules

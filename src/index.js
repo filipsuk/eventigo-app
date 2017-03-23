@@ -1,8 +1,8 @@
 /* @flow */
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import Homepage from './screens/Homepage';
-import EventDetail from './screens/EventDetail';
+import Homepage from './containers/Homepage';
+import EventDetail from './containers/EventDetail';
 import { StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
 import moment from 'moment';

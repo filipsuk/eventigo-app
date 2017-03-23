@@ -2,11 +2,9 @@
 
 import React from 'react';
 import { ScrollView, StatusBar } from 'react-native';
-import { connect } from 'react-redux';
 import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
 import { mockedEvents } from '../../mocks/mockedEvents';
-import { toggleBookmark } from '../../actions/bookmark';
 
 import type { Event } from '../../types';
 import type {
@@ -41,7 +39,13 @@ class Homepage extends React.Component {
   };
 
   handleEventPress = (event: Event) => {
-    this.props.navigation.navigate('Detail', { event: (event: any) }); // Typecast needed as params do not accept objects
+    this.props.navigation.navigate(
+      'Detail',
+      ({
+        event,
+        bookmarked: this.props.bookmarks[event.id.toString()]
+      }: any)
+    ); // Typecast needed as params do not accept objects
   };
 
   render() {
@@ -59,18 +63,4 @@ class Homepage extends React.Component {
   }
 }
 
-const mapStateToProps: mapStateToProps = state => {
-  return {
-    bookmarks: state.bookmarks
-  };
-};
-
-const mapDispatchToProps: mapDispatchToProps = dispatch => {
-  return {
-    onBookmarkPress: id => {
-      dispatch(toggleBookmark(id));
-    }
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Homepage);
+export default Homepage;

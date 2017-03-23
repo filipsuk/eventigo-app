@@ -6,7 +6,7 @@ import reducers from './reducers';
 const middlewares = [];
 const enhancers = composeWithDevTools(
   {
-    // Options: https://github.com/jhen0409/react-native-debugger#options
+    // Options: https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/API/Arguments.md
   }
 )(applyMiddleware(...middlewares));
 

@@ -17,6 +17,7 @@ import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 
 import type { Event } from '../../types';
+import type { BookmarksState } from '../../reducers/bookmarks';
 
 type Props = {
   navigation: {
@@ -25,7 +26,9 @@ type Props = {
         event: Event
       }
     }
-  }
+  },
+  bookmarks: BookmarksState,
+  onBookmarkPress: (number) => any
 };
 
 class EventDetail extends React.Component {
@@ -68,17 +71,22 @@ class EventDetail extends React.Component {
     Alert.alert('Není zatím implementováno');
   };
 
+  handleBookmarkPress = (id: number) => {
+    this.props.onBookmarkPress(id);
+  };
+
   render() {
     const { event } = this.props.navigation.state.params;
+    const { bookmarks } = this.props;
 
     return (
       <ScrollView>
         <Image source={{ uri: event.image }} style={styles.image}>
           <Bookmark
-            active={false}
+            active={bookmarks[event.id.toString()]}
             containerStyle={styles.bookmark}
             size={30}
-            onPress={() => console.log(`bookmarked event id ${event.id}`)}
+            onPress={() => this.handleBookmarkPress(event.id)}
           />
         </Image>
         <View style={styles.body}>
