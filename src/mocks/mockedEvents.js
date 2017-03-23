@@ -3,7 +3,7 @@ import type { Event } from '../types';
 
 const mockedEvents: Event[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Devel 2017',
     description: 'Lorem ipsum',
     url: 'https://example.org',
@@ -44,7 +44,7 @@ const mockedEvents: Event[] = [
     ]
   },
   {
-    id: 2,
+    id: '2',
     name: 'Machine Learning Prague 2017',
     description: `Machines can learn. Incredibly fast. Faster than you. They are getting smarter and smarter every day. They are already changing your world, your business and your life. Artificial intelligence revolution is here. Come and learn how to turn this threat into your biggest opportunity. This is not another academic conference. Our goal is to foster discussion between machine learning practitioners and all people who are interested in applications of modern trends in artificial intelligence. You can look forward to inspiring people, algorithms, data, applications, workshops and a lot of fun during three days as well as at two great parties.`,
     url: 'https://example.org',
@@ -85,7 +85,7 @@ const mockedEvents: Event[] = [
     ]
   },
   {
-    id: 3,
+    id: '3',
     name: 'Wisephora',
     description: 'Lorem ipsum',
     url: 'https://www.facebook.com/events/258779314553712/',

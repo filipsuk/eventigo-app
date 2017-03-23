@@ -28,7 +28,7 @@ type Props = {
     }
   },
   bookmarks: BookmarksState,
-  onBookmarkPress: (number) => any
+  onBookmarkPress: (string) => any
 };
 
 class EventDetail extends React.Component {
@@ -71,7 +71,7 @@ class EventDetail extends React.Component {
     Alert.alert('Není zatím implementováno');
   };
 
-  handleBookmarkPress = (id: number) => {
+  handleBookmarkPress = (id: string) => {
     this.props.onBookmarkPress(id);
   };
 
@@ -83,7 +83,7 @@ class EventDetail extends React.Component {
       <ScrollView>
         <Image source={{ uri: event.image }} style={styles.image}>
           <Bookmark
-            active={bookmarks[event.id.toString()]}
+            active={bookmarks[event.id]}
             containerStyle={styles.bookmark}
             size={30}
             onPress={() => this.handleBookmarkPress(event.id)}

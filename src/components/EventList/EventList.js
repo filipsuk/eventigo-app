@@ -9,7 +9,7 @@ type Props = {
   events: Event[],
   bookmarks?: BookmarksState,
   onEventPress: (Event) => any,
-  onBookmarkPress: (number) => any
+  onBookmarkPress: (string) => any
 };
 
 const EventList = (
@@ -22,7 +22,7 @@ const EventList = (
         return (
           <EventCard
             event={event}
-            bookmarked={bookmarks[event.id.toString()] || false}
+            bookmarked={bookmarks[event.id] || false}
             onPress={onEventPress}
             onBookmarkPress={onBookmarkPress}
             key={event.id}

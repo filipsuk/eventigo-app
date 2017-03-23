@@ -17,7 +17,7 @@ import type { BookmarksState } from '../../reducers/bookmarks';
 
 type Props = {
   bookmarks: BookmarksState,
-  onBookmarkPress: Function,
+  onBookmarkPress: (string) => any,
   navigation: NavigationScreenProp<NavigationState, NavigationAction>
 };
 
@@ -42,8 +42,7 @@ class Homepage extends React.Component {
     this.props.navigation.navigate(
       'Detail',
       ({
-        event,
-        bookmarked: this.props.bookmarks[event.id.toString()]
+        event
       }: any)
     ); // Typecast needed as params do not accept objects
   };
