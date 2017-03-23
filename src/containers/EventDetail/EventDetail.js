@@ -16,7 +16,7 @@ import EventDate from '../../components/EventDate';
 import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
 
 type Props = {

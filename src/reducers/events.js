@@ -1,7 +1,7 @@
 /* @flow */
 import { mockedEvents } from '../mocks/mockedEvents';
-import type { Action } from '../actions/types';
-import type { Event } from '../types';
+import type { Action } from '../types/actions';
+import type { Event } from '../types/model';
 
 export type EventsState = { [id: string]: Event };
 

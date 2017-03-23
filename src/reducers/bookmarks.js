@@ -1,5 +1,5 @@
 /* @flow */
-import type { Action } from '../actions/types';
+import type { Action } from '../types/actions';
 import { TOGGLE_BOOKMARK } from '../actions/constants';
 
 export type BookmarksState = { [id: string]: boolean };

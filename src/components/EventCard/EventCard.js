@@ -4,7 +4,7 @@ import React from 'react';
 import { Image, StyleSheet, TouchableHighlight } from 'react-native';
 import EventHeader from '../EventHeader';
 import Bookmark from '../Bookmark';
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 
 type Props = {
   event: Event,

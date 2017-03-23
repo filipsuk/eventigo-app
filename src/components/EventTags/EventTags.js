@@ -2,7 +2,7 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import { fontSizes } from '../../styles';
-import type { EventTag } from '../../types';
+import type { EventTag } from '../../types/model';
 
 type Props = {
   tags?: EventTag[],

@@ -1,5 +1,5 @@
 /* @flow */
-import type { Event } from '../types';
+import type { Event } from '../types/model';
 
 const mockedEvents: Event[] = [
   {

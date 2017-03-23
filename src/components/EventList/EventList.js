@@ -2,7 +2,7 @@
 import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import EventCard from '../../components/EventCard';
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 import type { EventsState } from '../../reducers/events';
 import type { BookmarksState } from '../../reducers/bookmarks';
 

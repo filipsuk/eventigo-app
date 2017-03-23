@@ -6,7 +6,7 @@ import EventDate from '../EventDate';
 import LinearGradient from 'react-native-linear-gradient';
 import { fontSizes } from '../../styles';
 
-import type { Event } from '../../types';
+import type { Event } from '../../types/model';
 
 type Props = {
   event: Event
