@@ -18,8 +18,8 @@ const Bookmark = ({ active, onPress, containerStyle, size }: Props) => {
       onPress={onPress}
     >
       <Icon
-        name={active ? 'bookmark' : 'bookmark-o'}
-        type="font-awesome"
+        name={active ? 'ios-bookmark' : 'ios-bookmark-outline'}
+        type="ionicon"
         color={active ? colors.highlight : colors.dark}
         size={size}
         underlayColor="transparent"
