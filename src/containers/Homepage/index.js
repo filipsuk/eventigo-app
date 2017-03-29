@@ -1,7 +1,7 @@
 /* @flow */
 import Homepage from './Homepage';
 import { connect } from 'react-redux';
-import { toggleBookmark } from '../../actions/bookmark';
+import { toggleBookmark, fetchData } from '../../actions';
 
 const mapStateToProps: mapStateToProps = state => {
   return {
@@ -14,6 +14,9 @@ const mapDispatchToProps: mapDispatchToProps = dispatch => {
   return {
     onBookmarkPress: id => {
       dispatch(toggleBookmark(id));
+    },
+    fetchEvents: () => {
+      dispatch(fetchData());
     }
   };
 };
