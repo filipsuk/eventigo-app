@@ -15,7 +15,6 @@ function events(
   switch (action.type) {
     case 'EVENTS_FETCHING_DATA_SUCCESS': {
       let newState = {};
-      console.log('EVENTS_FETCHING_DATA_SUCCESS', action);
       action.data.map(event => {
         newState = { ...newState, [event.id]: event };
       });
