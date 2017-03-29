@@ -19,6 +19,7 @@ type Props = {
   events: EventsState,
   bookmarks: BookmarksState,
   onBookmarkPress: (string) => any,
+  fetchEvents: () => void,
   navigation: NavigationScreenProp<NavigationState, NavigationAction>
 };
 
@@ -47,6 +48,10 @@ class Homepage extends React.Component {
       }: any)
     ); // Typecast needed as params do not accept objects
   };
+
+  componentDidMount() {
+    this.props.fetchEvents();
+  }
 
   render() {
     return (
