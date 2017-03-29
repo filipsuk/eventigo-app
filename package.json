@@ -44,6 +44,9 @@
     "redux-devtools-extension": "^2.13.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native-navigation)/"
+    ]
   }
 }
