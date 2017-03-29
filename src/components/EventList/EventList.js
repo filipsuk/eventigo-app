@@ -1,7 +1,15 @@
 /* @flow */
 import React from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
+import {
+  StyleSheet,
+  ScrollView,
+  ActivityIndicator,
+  View,
+  Text
+} from 'react-native';
+import { Icon } from 'react-native-elements';
 import EventCard from '../../components/EventCard';
+import { colors } from '../../styles';
 import type { Event } from '../../types/model';
 import type { EventsState } from '../../reducers/events';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -19,23 +27,48 @@ const EventList = (
   // TODO: Use FlatList after upgrade to RN 0.43
   return (
     <ScrollView style={styles.container}>
-      {Object.keys(events).map(id => {
-        return (
-          <EventCard
-            event={events[id]}
-            bookmarked={bookmarks[id] || false}
-            onPress={onEventPress}
-            onBookmarkPress={onBookmarkPress}
-            key={id}
+      {events.isFetching && <ActivityIndicator style={styles.loader} />}
+
+      {events.dataFetched &&
+        Object.keys(events.data).map(id => {
+          return (
+            <EventCard
+              event={events.data[id]}
+              bookmarked={bookmarks[id] || false}
+              onPress={onEventPress}
+              onBookmarkPress={onBookmarkPress}
+              key={id}
+            />
+          );
+        })}
+
+      {events.error &&
+        <View style={styles.error}>
+          <Icon
+            name="error"
+            color={colors.dark}
+            containerStyle={styles.errorIcon}
           />
-        );
-      })}
+          <Text>Chyba načítání</Text>
+        </View>}
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {}
+  container: {},
+  loader: {
+    margin: 30
+  },
+  error: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    margin: 30
+  },
+  errorIcon: {
+    marginRight: 5
+  }
 });
 
 export default EventList;
