@@ -9,7 +9,7 @@ export type EventsState = {
   error: boolean
 };
 
-let initialState: EventsState = {
+const initialState: EventsState = {
   data: {},
   dataFetched: false,
   isFetching: false,

@@ -8,4 +8,8 @@ jest.mock('Linking', () => {
     getInitialURL: jest.fn(() => Promise.resolve())
   };
 });
+
+jest.mock('TouchableHighlight', () => 'TouchableHighlight');
+jest.mock('TouchableOpacity', () => 'TouchableOpacity');
+
 module.exports = rn;
