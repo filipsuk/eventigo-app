@@ -51,7 +51,7 @@
       "./jest-setup.js"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native-navigation)/"
+      "node_modules/(?!react-native|react-native-navigation)/"
     ]
   }
 }

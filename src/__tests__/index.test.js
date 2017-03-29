@@ -7,6 +7,9 @@ import Index from '../index';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
+jest.mock('../api');
+
 it('renders correctly', () => {
   const tree = renderer.create(<Index />);
+  expect(tree).toMatchSnapshot();
 });
