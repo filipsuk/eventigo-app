@@ -89,40 +89,18 @@ const mockedEvents: Event[] = [
     name: 'Wisephora',
     description: 'Lorem ipsum',
     url: 'https://www.facebook.com/events/258779314553712/',
-    start: '2017-05-30T10:00+01:00',
+    start: '2017-05-30T00:00+02:00',
     image: 'https://i.imgsafe.org/e89935b30c.png',
-    tags: [
-      {
-        id: 1,
-        rate: 3,
-        name: 'Programování',
-        code: 'programovani'
-      },
-      {
-        id: 2,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
-      },
-      {
-        id: 3,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
-      },
-      {
-        id: 5,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
-      },
-      {
-        id: 6,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
-      }
-    ]
+    tags: []
+  },
+  {
+    id: '4',
+    name: 'Barcamp Brno 2017',
+    description: 'Lorem ipsum',
+    url: 'https://www.facebook.com/events/177998046038693/',
+    start: '2017-05-30T09:00+02:00',
+    image: 'https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/17309161_1468886766478209_1697312904965273491_n.jpg?oh=639ef12fccff2e58e3fadd0ca46fdb48&oe=5970B9B1',
+    tags: []
   }
 ];
 
