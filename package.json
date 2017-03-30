@@ -37,6 +37,7 @@
     "eslint-plugin-flowtype": "^2.30.3",
     "eslint-plugin-prettier": "^2.0.1",
     "eslint-plugin-react": "^6.10.0",
+    "fetch-mock": "^5.9.4",
     "flow-bin": "^0.38.0",
     "husky": "^0.13.2",
     "jest": "19.0.2",
