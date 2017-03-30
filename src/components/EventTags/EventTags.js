@@ -11,7 +11,7 @@ type Props = {
 };
 
 const EventTags = ({ tags, style, numberOfLines }: Props) => {
-  if (!tags) {
+  if (!tags || (tags && tags.length === 0)) {
     return null;
   }
   return (
