@@ -6,3 +6,6 @@ import 'isomorphic-fetch';
 import JSTimers from 'react-native/Libraries/Core/Timers/JSTimers';
 global.cancelAnimationFrame = JSTimers.cancelAnimationFrame;
 global.requestAnimationFrame = JSTimers.requestAnimationFrame;
+
+import moment from 'moment-timezone';
+moment.tz.setDefault('Europe/Prague');
