@@ -1,4 +1,5 @@
 /* @flow */
+import type { EventsData } from './apiData';
 
 export type ActionTypes =
   | 'TOGGLE_BOOKMARK'
@@ -12,7 +13,7 @@ type FetchEventsAction = { type: 'EVENTS_FETCHING_DATA' };
 
 type FetchEventsSuccessAction = {
   type: 'EVENTS_FETCHING_DATA_SUCCESS',
-  data: any
+  data: EventsData
 };
 
 type FetchEventsFailAction = {

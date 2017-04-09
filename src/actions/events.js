@@ -1,6 +1,7 @@
 /* @flow */
 
 import type { Action } from '../types/actions';
+import type { EventsData } from '../types/apiData';
 
 export function fetchData(): Action {
   return {
@@ -8,7 +9,7 @@ export function fetchData(): Action {
   };
 }
 
-export function fetchDataSuccess(data: any): Action {
+export function fetchDataSuccess(data: EventsData): Action {
   return {
     type: 'EVENTS_FETCHING_DATA_SUCCESS',
     data
