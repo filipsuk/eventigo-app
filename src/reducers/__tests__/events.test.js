@@ -5,6 +5,7 @@ import { mockedEvents } from '../../__mocks__/data/mockedEvents';
 
 import type { EventsState } from '../events';
 import type { EventsData } from '../../types/apiData';
+import type { Action } from '../../types/actions';
 
 describe('events reducer', () => {
   const initialState: EventsState = {
@@ -20,7 +21,7 @@ describe('events reducer', () => {
 
   it('adds fetched events', () => {
     const events: EventsData = mockedEvents;
-    const action = {
+    const action: Action = {
       type: 'EVENTS_FETCHING_DATA_SUCCESS',
       data: events
     };
