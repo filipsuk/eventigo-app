@@ -3,3 +3,6 @@
 [![Test Coverage](https://codeclimate.com/github/filipsuk/eventigoApp/badges/coverage.svg)](https://codeclimate.com/github/filipsuk/eventigoApp/coverage)
 
 # Eventigo.cz Mobile App
+
+## Screenshots
+![image](https://cloud.githubusercontent.com/assets/6044955/24909627/f371467e-1ec4-11e7-8d83-8ae6c8b2cbd6.png)
