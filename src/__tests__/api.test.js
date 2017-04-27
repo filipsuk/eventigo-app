@@ -1,5 +1,5 @@
 /* @flow */
-import { fetchApiEvents, host } from '../api';
+import { fetchApiEvents } from '../api';
 import axios from 'axios';
 import axiosMock from 'axios-mock-adapter';
 import { mockedEvents } from '../__mocks__/data/mockedEvents';

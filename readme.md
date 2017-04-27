@@ -4,6 +4,14 @@
 
 # Eventigo.cz Mobile App
 
+## Requirements
+- [React Native](http://facebook.github.io/react-native/docs/getting-started.html) (follow iOS and Android guides)
+
+## Setup
+1. `$ yarn install`
+2. Copy `.env.template` to `.env` and replace API host if needed (default eventigo.cz)
+3. `$ react-native run-ios` or `$ react-native run-android`
+
 ## Screenshots
 ### iOS
 ![iPhone](https://cloud.githubusercontent.com/assets/6044955/24909627/f371467e-1ec4-11e7-8d83-8ae6c8b2cbd6.png)
