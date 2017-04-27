@@ -11,4 +11,4 @@ function fetchApiEvents(): Promise<EventsData> {
     .then((response: $AxiosXHR<EventsData>) => response.data);
 }
 
-export { fetchApiEvents };
+export { fetchApiEvents, host };

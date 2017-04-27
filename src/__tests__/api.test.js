@@ -1,11 +1,13 @@
 /* @flow */
-import { fetchApiEvents } from '../api';
-import fetchMock from 'fetch-mock';
+import { fetchApiEvents, host } from '../api';
+import axios from 'axios';
+import axiosMock from 'axios-mock-adapter';
 import { mockedEvents } from '../__mocks__/data/mockedEvents';
 
 describe('API', () => {
   it('fetches events', () => {
-    fetchMock.get('end:api/v1/events', mockedEvents);
+    let mock = new axiosMock(axios);
+    mock.onGet(/\/api\/v1\/events$/).reply(200, mockedEvents);
     return fetchApiEvents().then(response => {
       expect(response).toEqual(mockedEvents);
     });

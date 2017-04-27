@@ -30,6 +30,7 @@
     "rxjs": "^5.2.0"
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.8.1",
     "babel-eslint": "^7.1.1",
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
@@ -38,7 +39,6 @@
     "eslint-plugin-flowtype": "^2.32.1",
     "eslint-plugin-prettier": "^2.0.1",
     "eslint-plugin-react": "^6.10.0",
-    "fetch-mock": "^5.9.4",
     "flow-bin": "^0.44.2",
     "husky": "^0.13.2",
     "jest": "19.0.2",
