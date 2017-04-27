@@ -2,13 +2,12 @@
 import axios from 'axios';
 import type { EventsData } from './types/apiData';
 import type { $AxiosXHR } from 'axios';
-
-const host = 'https://private-6e9cf6-eventigo.apiary-mock.com/';
+import Config from 'react-native-config';
 
 function fetchApiEvents(): Promise<EventsData> {
   return axios
-    .get(`${host}api/v1/events`)
+    .get(`${Config.API_HOST}/api/v1/events`)
     .then((response: $AxiosXHR<EventsData>) => response.data);
 }
 
-export { fetchApiEvents, host };
+export { fetchApiEvents };
