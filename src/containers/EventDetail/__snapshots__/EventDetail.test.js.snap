@@ -159,7 +159,7 @@ exports[`renders correctly 1`] = `
           ellipsizeMode="tail"
         >
           #
-          konference
+          javascript
            
         </Text>
         <Text
@@ -168,16 +168,7 @@ exports[`renders correctly 1`] = `
           ellipsizeMode="tail"
         >
           #
-          konference
-           
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          #
-          konference
+          php
            
         </Text>
       </Text>
