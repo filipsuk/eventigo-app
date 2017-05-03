@@ -6,7 +6,9 @@ addons:
   code_climate:
     repo_token: 80cf694f6a90484fc01dba9f030e8abc98cf8d0a0a17c7d37998c0bd8bb4f67e
 
-script: npm test -- --coverage
+script: 
+  - npm test -- --coverage
+  - npm flow -- check
 
 after_success:
   - npm install -g codeclimate-test-reporter
