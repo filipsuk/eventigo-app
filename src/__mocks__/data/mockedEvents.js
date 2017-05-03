@@ -3,7 +3,7 @@ import type { Event } from '../../types/model';
 
 const mockedEvents: Event[] = [
   {
-    id: '1',
+    id: '7f0386b06616c2db3ca022b34875ad7d',
     name: 'Devel 2017',
     description: 'Lorem ipsum',
     url: 'https://example.org',
@@ -12,39 +12,29 @@ const mockedEvents: Event[] = [
     image: 'https://i.imgsafe.org/a5b1b555fc.png',
     tags: [
       {
-        id: 1,
-        rate: 3,
+        code: 'programovani',
         name: 'Programování',
-        code: 'programovani'
+        rate: 3
       },
       {
-        id: 2,
-        rate: 5,
+        code: 'konference',
         name: 'Konference',
-        code: 'konference'
+        rate: 5
       },
       {
-        id: 3,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
+        code: 'javascript',
+        name: 'JavaScript',
+        rate: 3
       },
       {
-        id: 5,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
-      },
-      {
-        id: 6,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
+        code: 'php',
+        name: 'PHP',
+        rate: 2
       }
     ]
   },
   {
-    id: '2',
+    id: 'e32f3aa0ea2ed4935bc747659d2104bd',
     name: 'Machine Learning Prague 2017',
     description: `Machines can learn. Incredibly fast. Faster than you. They are getting smarter and smarter every day. They are already changing your world, your business and your life. Artificial intelligence revolution is here. Come and learn how to turn this threat into your biggest opportunity. This is not another academic conference. Our goal is to foster discussion between machine learning practitioners and all people who are interested in applications of modern trends in artificial intelligence. You can look forward to inspiring people, algorithms, data, applications, workshops and a lot of fun during three days as well as at two great parties.`,
     url: 'https://example.org',
@@ -53,39 +43,34 @@ const mockedEvents: Event[] = [
     image: 'https://i.imgsafe.org/030bbc1041.jpg',
     tags: [
       {
-        id: 1,
-        rate: 3,
+        code: 'programovani',
         name: 'Programování',
-        code: 'programovani'
+        rate: 3
       },
       {
-        id: 2,
-        rate: 5,
+        code: 'konference',
         name: 'Konference',
-        code: 'konference'
+        rate: 4
       },
       {
-        id: 3,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
+        code: 'machinelearning',
+        name: 'Machine Learning',
+        rate: 5
       },
       {
-        id: 5,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
+        code: 'ai',
+        name: 'Umělá inteligence',
+        rate: 1
       },
       {
-        id: 6,
-        rate: 5,
-        name: 'Konference',
-        code: 'konference'
+        code: 'networking',
+        name: 'Networking',
+        rate: 2
       }
     ]
   },
   {
-    id: '3',
+    id: 'd9b566c6dd9fe95e3559582f9f1882a7',
     name: 'Wisephora',
     description: 'Lorem ipsum',
     url: 'https://www.facebook.com/events/258779314553712/',
@@ -94,7 +79,7 @@ const mockedEvents: Event[] = [
     tags: []
   },
   {
-    id: '4',
+    id: 'd3382a28fba675b49655f1500196c1e3',
     name: 'Barcamp Brno 2017',
     description: 'Lorem ipsum',
     url: 'https://www.facebook.com/events/177998046038693/',

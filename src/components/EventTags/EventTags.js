@@ -21,7 +21,7 @@ const EventTags = ({ tags, style, numberOfLines }: Props) => {
       ellipsizeMode="tail"
     >
       {tags.map(tag => {
-        return <Text key={tag.id}>#{tag.code} </Text>;
+        return <Text key={tag.code}>#{tag.code} </Text>;
       })}
     </Text>
   );

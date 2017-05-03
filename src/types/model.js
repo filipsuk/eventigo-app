@@ -12,8 +12,7 @@ export type Event = {
 };
 
 export type EventTag = {
-  id: number,
-  rate: 1 | 2 | 3 | 4 | 5, // 1: weak, 5: strong relation
+  code: string,
   name: string,
-  code: string
+  rate: 1 | 2 | 3 | 4 | 5 // 1: weak, 5: strong relation
 };
