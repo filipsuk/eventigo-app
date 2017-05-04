@@ -8,6 +8,7 @@ import { navigationHeader } from '../../styles';
 import type { Event } from '../../types/model';
 import type {
   NavigationScreenOptions,
+  NavigationStackScreenOptions,
   NavigationState,
   NavigationAction,
   NavigationScreenProp
@@ -26,17 +27,15 @@ type Props = {
 class Homepage extends React.Component {
   props: Props;
 
-  static navigationOptions: NavigationScreenOptions = {
+  static navigationOptions: NavigationStackScreenOptions = {
     title: 'eventigo.cz',
-    header: {
-      titleStyle: {
-        alignSelf: 'center'
-      },
-      backTitle: null,
-      tintColor: navigationHeader.headerTintColor,
-      style: {
-        backgroundColor: navigationHeader.headerBackgroundColor
-      }
+    titleStyle: {
+      alignSelf: 'center'
+    },
+    backTitle: null,
+    headerTintColor: navigationHeader.headerTintColor,
+    headerStyle: {
+      backgroundColor: navigationHeader.headerBackgroundColor
     }
   };
 
