@@ -13,6 +13,18 @@ exports[`renders correctly 1`] = `
   }
 >
   <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
     style={
       Object {
         "flex": 1,
@@ -28,18 +40,6 @@ exports[`renders correctly 1`] = `
       }
     >
       <View
-        onMoveShouldSetResponder={[Function]}
-        onMoveShouldSetResponderCapture={[Function]}
-        onResponderEnd={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderReject={[Function]}
-        onResponderRelease={[Function]}
-        onResponderStart={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onStartShouldSetResponderCapture={[Function]}
         pointerEvents="auto"
         style={
           Object {
@@ -92,6 +92,9 @@ exports[`renders correctly 1`] = `
       </View>
     </View>
     <View
+      cardStyle={undefined}
+      getScreenDetails={[Function]}
+      headerMode={undefined}
       index={0}
       layout={
         Object {
@@ -110,26 +113,16 @@ exports[`renders correctly 1`] = `
           "navigate": [Function],
           "setParams": [Function],
           "state": Object {
-            "key": "Init",
-            "routeName": "Home",
+            "index": 0,
+            "routes": Array [
+              Object {
+                "key": "Init",
+                "routeName": "Home",
+              },
+            ],
           },
         }
       }
-      navigationState={
-        Object {
-          "index": 0,
-          "routes": Array [
-            Object {
-              "key": "Init",
-              "routeName": "Home",
-            },
-          ],
-        }
-      }
-      onNavigateBack={[Function]}
-      renderLeftComponent={[Function]}
-      renderRightComponent={[Function]}
-      renderTitleComponent={[Function]}
       router={
         Object {
           "getActionForPathAndParams": [Function],
@@ -137,6 +130,7 @@ exports[`renders correctly 1`] = `
           "getComponentForState": [Function],
           "getPathAndParamsForState": [Function],
           "getScreenConfig": [Function],
+          "getScreenOptions": [Function],
           "getStateForAction": [Function],
         }
       }
@@ -154,6 +148,7 @@ exports[`renders correctly 1`] = `
           "shadowRadius": 0.5,
         }
       }
+      transitionConfig={undefined}
     >
       <View
         style={
@@ -200,6 +195,7 @@ exports[`renders correctly 1`] = `
             }
           >
             <Text
+              accessibilityTraits="header"
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
@@ -218,9 +214,7 @@ exports[`renders correctly 1`] = `
                     Object {
                       "color": "#FFF",
                     },
-                    Object {
-                      "alignSelf": "center",
-                    },
+                    undefined,
                   ],
                 ]
               }
