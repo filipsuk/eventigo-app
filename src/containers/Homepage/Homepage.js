@@ -31,7 +31,7 @@ class Homepage extends React.Component {
     titleStyle: {
       alignSelf: 'center'
     },
-    headerBackTitle: null,
+    headerBackTitle: ' ',
     headerTintColor: navigationHeader.headerTintColor,
     headerStyle: {
       backgroundColor: navigationHeader.headerBackgroundColor
