@@ -7,7 +7,6 @@ import { navigationHeader } from '../../styles';
 
 import type { Event } from '../../types/model';
 import type {
-  NavigationScreenOptions,
   NavigationStackScreenOptions,
   NavigationState,
   NavigationAction,
@@ -32,7 +31,7 @@ class Homepage extends React.Component {
     titleStyle: {
       alignSelf: 'center'
     },
-    backTitle: null,
+    headerBackTitle: null,
     headerTintColor: navigationHeader.headerTintColor,
     headerStyle: {
       backgroundColor: navigationHeader.headerBackgroundColor
