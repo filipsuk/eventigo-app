@@ -18,6 +18,9 @@ import { navigationHeader, fontSizes, colors } from '../../styles';
 
 import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
+import type {
+  NavigationStackScreenOptions
+} from 'react-navigation/src/TypeDefinition.js';
 
 type Props = {
   navigation: {
@@ -34,15 +37,14 @@ type Props = {
 class EventDetail extends React.Component {
   props: Props;
 
-  static navigationOptions = {
-    title: ({ state }) => state.params.event.name,
-    header: {
-      tintColor: navigationHeader.headerTintColor,
-      style: {
+  static navigationOptions = ({ navigation }) =>
+    ({
+      title: navigation.state.params.event.name,
+      headerTintColor: navigationHeader.headerTintColor,
+      headerStyle: {
         backgroundColor: navigationHeader.headerBackgroundColor
       }
-    }
-  };
+    }: NavigationStackScreenOptions);
 
   /**
   * Open URL in browser
