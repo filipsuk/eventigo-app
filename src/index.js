@@ -33,4 +33,4 @@ const setup = () => {
 
 export default setup;
 
-AppRegistry.registerComponent('eventigoApp', () => setup);
+AppRegistry.registerComponent('EventigoApp', () => setup);
