@@ -3,6 +3,9 @@
 [![Test Coverage](https://codeclimate.com/github/filipsuk/eventigo-app/badges/coverage.svg)](https://codeclimate.com/github/filipsuk/eventigo-app/coverage)
 
 # Eventigo.cz Mobile App
+Mobile client for [Eventigo.cz](https://eventigo.cz) written in React Native. 
+
+Part of author's Master's thesis: [Methodology for mobile development in React Native](https://vskp.vse.cz/68718_metodika_pro_vyvoj_mobilnich_aplikaci_vreact_native).
 
 ## Requirements
 - [React Native](http://facebook.github.io/react-native/docs/getting-started.html) (follow iOS and Android guides)
