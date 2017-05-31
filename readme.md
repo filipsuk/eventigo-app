@@ -8,9 +8,28 @@
 - [React Native](http://facebook.github.io/react-native/docs/getting-started.html) (follow iOS and Android guides)
 
 ## Setup
-1. `$ yarn install`
-2. Copy `.env.template` to `.env` and replace API host if needed (default eventigo.cz)
-3. `$ react-native run-ios` or `$ react-native run-android`
+1. Install dependencies:
+```bash
+yarn install
+```
+2. Copy `.env.template` to `.env` and replace API host if needed
+
+3. Run on device or simulator:
+```bash
+react-native run-ios
+# or 
+react-native run-android
+```
+
+## Build release
+
+### Android
+1. [Generate your signing key](http://facebook.github.io/react-native/docs/signed-apk-android.html)
+2. Name gradle variables `EVENTIGO_RELEASE_*` instead of `MYAPP_RELEASE_*`
+3. Run build script
+```bash
+yarn build-android-release
+```
 
 ## Screenshots
 ### iOS
