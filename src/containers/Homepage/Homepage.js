@@ -4,13 +4,14 @@ import React from 'react';
 import { ScrollView, StatusBar } from 'react-native';
 import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
+import { tracker } from '../../ga';
 
 import type { Event } from '../../types/model';
 import type {
   NavigationStackScreenOptions,
-  NavigationState,
   NavigationAction,
-  NavigationScreenProp
+  NavigationScreenProp,
+  NavigationLeafRoute
 } from 'react-navigation/src/TypeDefinition.js';
 import type { BookmarksState } from '../../reducers/bookmarks';
 import type { EventsState } from '../../reducers/events';
@@ -20,7 +21,7 @@ type Props = {
   bookmarks: BookmarksState,
   onBookmarkPress: (string) => any,
   fetchEvents: () => void,
-  navigation: NavigationScreenProp<NavigationState, NavigationAction>
+  navigation: NavigationScreenProp<NavigationLeafRoute, NavigationAction>
 };
 
 class Homepage extends React.Component {
@@ -49,6 +50,7 @@ class Homepage extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvents();
+    tracker.trackScreenView(this.props.navigation.state.routeName);
   }
 
   render() {
