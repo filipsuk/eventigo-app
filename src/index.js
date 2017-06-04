@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import moment from 'moment';
 import csLocale from 'moment/locale/cs';
 import configureStore from './configureStore';
+import { trackNavigationStateChange } from './ga';
 
 const Root = StackNavigator({
   Home: { screen: Homepage },
@@ -26,7 +27,7 @@ const setup = () => {
 
   return (
     <Provider store={store}>
-      <Root />
+      <Root onNavigationStateChange={trackNavigationStateChange} />
     </Provider>
   );
 };
