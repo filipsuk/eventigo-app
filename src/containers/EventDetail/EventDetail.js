@@ -15,6 +15,7 @@ import EventTags from '../../components/EventTags';
 import EventDate from '../../components/EventDate';
 import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
+import { tracker } from '../../ga';
 
 import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -67,10 +68,12 @@ class EventDetail extends React.Component {
   handleOpen = () => {
     const { url } = this.props.navigation.state.params.event;
     EventDetail.openUrl(url);
+    tracker.trackEvent('Detail', 'Open event source');
   };
 
   handleAddToCalendar = () => {
     Alert.alert('Není zatím implementováno');
+    tracker.trackEvent('Detail', 'Add to calendar');
   };
 
   handleBookmarkPress = (id: string) => {
