@@ -32,9 +32,8 @@ function getCurrentRouteName(navigationState: any) {
   if (!navigationState) {
     return null;
   }
-  const route: NavigationLeafRoute = navigationState.routes[
-    navigationState.index
-  ];
+  const route: NavigationLeafRoute =
+    navigationState.routes[navigationState.index];
   // dive into nested navigators
   if (route.routes) {
     return getCurrentRouteName(route);

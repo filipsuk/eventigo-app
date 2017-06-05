@@ -14,6 +14,7 @@ const fetchEventsEpic = (action$: Observable<Action>) =>
     .mergeMap(action =>
       Observable.fromPromise(fetchApiEvents())
         .map(response => fetchDataSuccess(response))
-        .catch(error => Observable.of(fetchDataFailure(error))));
+        .catch(error => Observable.of(fetchDataFailure(error)))
+    );
 
 export default fetchEventsEpic;
