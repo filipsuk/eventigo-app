@@ -1,4 +1,5 @@
 /* @flow */
+import { tracker } from '../ga';
 import type { Action } from '../types/actions';
 import type { Event } from '../types/model';
 
@@ -40,6 +41,9 @@ function events(
 
     case 'EVENTS_FETCHING_DATA_FAILURE': {
       console.error(action.errorMessage);
+      tracker.trackException(
+        `EVENTS_FETCHING_DATA_FAILURE: ${action.errorMessage}`
+      );
       return { ...state, isFetching: false, error: true };
     }
 
