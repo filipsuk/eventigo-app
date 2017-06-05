@@ -8,6 +8,7 @@ import Index from '../index';
 import renderer from 'react-test-renderer';
 
 jest.mock('../api');
+jest.mock('../ga.js');
 
 it('renders correctly', () => {
   const tree = renderer.create(<Index />);
