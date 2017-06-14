@@ -3660,6 +3660,10 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-add-calendar-event@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-add-calendar-event/-/react-native-add-calendar-event-0.1.2.tgz#8b24fe60ab30b3194b612259dbd4b5d9fee9296a"
+
 react-native-config@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.4.0.tgz#b84bc9b99ad6632aa3756d85754f87957471094b"

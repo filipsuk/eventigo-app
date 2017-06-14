@@ -16,12 +16,12 @@ import EventDate from '../../components/EventDate';
 import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 import { tracker } from '../../ga';
+import * as AddCalendarEvent from 'react-native-add-calendar-event';
+import moment from 'moment';
 
 import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
-import type {
-  NavigationStackScreenOptions
-} from 'react-navigation/src/TypeDefinition.js';
+import type { NavigationStackScreenOptions } from 'react-navigation/src/TypeDefinition.js';
 
 type Props = {
   navigation: {
@@ -32,7 +32,7 @@ type Props = {
     }
   },
   bookmarks: BookmarksState,
-  onBookmarkPress: (string) => any
+  onBookmarkPress: string => any
 };
 
 class EventDetail extends React.Component {
@@ -72,7 +72,36 @@ class EventDetail extends React.Component {
   };
 
   handleAddToCalendar = () => {
-    Alert.alert('Není zatím implementováno');
+    const { event } = this.props.navigation.state.params;
+    const format = 'YYYY-MM-DDTHH:mm:ss.SSSZZ';
+    const start = moment(event.start).format(format);
+    const end = moment(event.end || null).format(format);
+    const eventConfig = {
+      title: event.name,
+      startDate: start,
+      endDate: end,
+      url: event.url,
+      notes: event.description
+    };
+
+    AddCalendarEvent.presentNewCalendarEventDialog(eventConfig)
+      .then(eventId => {
+        //handle success (receives event id) or dismissing the modal (receives false)
+        if (eventId) {
+          Alert.alert('Úspěšně uloženo');
+        } else {
+          console.warn('dismissed');
+        }
+      })
+      .catch((error: string) => {
+        // handle error such as when user rejected permissions
+        Alert.alert(
+          'Uložení do kalendáře se nezdařilo',
+          'Zkontrolujte oprávnění ke kalendáři.'
+        );
+        console.warn(error);
+      });
+
     tracker.trackEvent('Detail', 'Add to calendar');
   };
 
