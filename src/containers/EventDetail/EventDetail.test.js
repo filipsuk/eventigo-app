@@ -14,7 +14,11 @@ import renderer from 'react-test-renderer';
 
 import type { RootState } from '../../reducers';
 
+jest.mock('../../ga.js');
+
 it('renders correctly', () => {
+  require('../../utils').addEventToCalendar = jest.fn();
+
   const initialState: RootState = {
     events: eventsReducer(undefined, fetchDataSuccess(mockedEvents)),
     bookmarks: {}
