@@ -44,8 +44,8 @@ class EventDetail extends React.Component {
     tracker.trackEvent('Detail', 'Open event source');
   };
 
-  handleAddToCalendar = (event: Event) => {
-    addEventToCalendar(event);
+  handleAddToCalendar = () => {
+    addEventToCalendar(this.props.navigation.state.params.event);
     tracker.trackEvent('Detail', 'Add to calendar');
   };
 
@@ -85,9 +85,7 @@ class EventDetail extends React.Component {
             </Col>
             <Col>
               <Button
-                onPress={this.handleAddToCalendar(
-                  this.props.navigation.state.params.event
-                )}
+                onPress={this.handleAddToCalendar}
                 icon={{ name: 'calendar-plus-o', type: 'font-awesome' }}
                 title="ULOŽIT"
                 buttonStyle={styles.button}
