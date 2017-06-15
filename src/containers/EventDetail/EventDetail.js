@@ -1,23 +1,14 @@
 /* @flow */
 
 import React from 'react';
-import {
-  View,
-  ScrollView,
-  Text,
-  Image,
-  StyleSheet,
-  Linking,
-  Alert
-} from 'react-native';
+import { View, ScrollView, Text, Image, StyleSheet } from 'react-native';
 import { Button, Grid, Col } from 'react-native-elements';
 import EventTags from '../../components/EventTags';
 import EventDate from '../../components/EventDate';
 import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 import { tracker } from '../../ga';
-import * as AddCalendarEvent from 'react-native-add-calendar-event';
-import moment from 'moment';
+import { addEventToCalendar, openUrl } from '../../utils';
 
 import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -47,61 +38,14 @@ class EventDetail extends React.Component {
       }
     }: NavigationStackScreenOptions);
 
-  /**
-  * Open URL in browser
-  */
-  static openUrl(url: string): void {
-    // TODO: if facebook, open in app with uri like fb://event?id=258779314553712
-    Linking.canOpenURL(url).then(supported => {
-      if (supported) {
-        Linking.openURL(url).catch(err => {
-          console.error('Error opening link:', err);
-          Alert.alert('Chyba', `Nepodařilo se otevřít url ${url}`);
-        });
-      } else {
-        console.error("Don't know how to open URI: " + url);
-        Alert.alert('Chyba', `Nepodařilo se otevřít url ${url}`);
-      }
-    });
-  }
-
   handleOpen = () => {
     const { url } = this.props.navigation.state.params.event;
-    EventDetail.openUrl(url);
+    openUrl(url);
     tracker.trackEvent('Detail', 'Open event source');
   };
 
-  handleAddToCalendar = () => {
-    const { event } = this.props.navigation.state.params;
-    const format = 'YYYY-MM-DDTHH:mm:ss.SSSZZ';
-    const start = moment(event.start).format(format);
-    const end = moment(event.end || null).format(format);
-    const eventConfig = {
-      title: event.name,
-      startDate: start,
-      endDate: end,
-      url: event.url,
-      notes: event.description
-    };
-
-    AddCalendarEvent.presentNewCalendarEventDialog(eventConfig)
-      .then(eventId => {
-        //handle success (receives event id) or dismissing the modal (receives false)
-        if (eventId) {
-          Alert.alert('Úspěšně uloženo');
-        } else {
-          console.warn('dismissed');
-        }
-      })
-      .catch((error: string) => {
-        // handle error such as when user rejected permissions
-        Alert.alert(
-          'Uložení do kalendáře se nezdařilo',
-          'Zkontrolujte oprávnění ke kalendáři.'
-        );
-        console.warn(error);
-      });
-
+  handleAddToCalendar = (event: Event) => {
+    addEventToCalendar(event);
     tracker.trackEvent('Detail', 'Add to calendar');
   };
 
@@ -141,7 +85,9 @@ class EventDetail extends React.Component {
             </Col>
             <Col>
               <Button
-                onPress={this.handleAddToCalendar}
+                onPress={this.handleAddToCalendar(
+                  this.props.navigation.state.params.event
+                )}
                 icon={{ name: 'calendar-plus-o', type: 'font-awesome' }}
                 title="ULOŽIT"
                 buttonStyle={styles.button}
