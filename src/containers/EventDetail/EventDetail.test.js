@@ -14,9 +14,6 @@ import renderer from 'react-test-renderer';
 
 import type { RootState } from '../../reducers';
 
-jest.mock('../../ga.js');
-jest.mock('react-native-add-calendar-event');
-
 it('renders correctly', () => {
   const initialState: RootState = {
     events: eventsReducer(undefined, fetchDataSuccess(mockedEvents)),
