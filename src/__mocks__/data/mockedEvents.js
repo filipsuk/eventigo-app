@@ -84,7 +84,8 @@ const mockedEvents: Event[] = [
     description: 'Lorem ipsum',
     url: 'https://www.facebook.com/events/177998046038693/',
     start: '2017-05-30T09:00+02:00',
-    image: 'https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/17309161_1468886766478209_1697312904965273491_n.jpg?oh=639ef12fccff2e58e3fadd0ca46fdb48&oe=5970B9B1',
+    image:
+      'https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/17309161_1468886766478209_1697312904965273491_n.jpg?oh=639ef12fccff2e58e3fadd0ca46fdb48&oe=5970B9B1',
     tags: []
   }
 ];

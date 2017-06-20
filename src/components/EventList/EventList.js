@@ -17,13 +17,16 @@ import type { BookmarksState } from '../../reducers/bookmarks';
 type Props = {
   events: EventsState,
   bookmarks?: BookmarksState,
-  onEventPress: (Event) => any,
-  onBookmarkPress: (string) => any
+  onEventPress: Event => any,
+  onBookmarkPress: string => any
 };
 
-const EventList = (
-  { events, bookmarks = {}, onEventPress, onBookmarkPress }: Props
-) => {
+const EventList = ({
+  events,
+  bookmarks = {},
+  onEventPress,
+  onBookmarkPress
+}: Props) => {
   // TODO: Use FlatList after upgrade to RN 0.43
   return (
     <ScrollView style={styles.container}>

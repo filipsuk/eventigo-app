@@ -19,7 +19,7 @@ import type { EventsState } from '../../reducers/events';
 type Props = {
   events: EventsState,
   bookmarks: BookmarksState,
-  onBookmarkPress: (string) => any,
+  onBookmarkPress: string => any,
   fetchEvents: () => void,
   navigation: NavigationScreenProp<NavigationLeafRoute, NavigationAction>
 };

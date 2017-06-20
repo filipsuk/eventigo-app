@@ -9,8 +9,8 @@ import type { Event } from '../../types/model';
 type Props = {
   event: Event,
   bookmarked: boolean,
-  onPress?: (Event) => any,
-  onBookmarkPress?: (string) => any
+  onPress?: Event => any,
+  onBookmarkPress?: string => any
 };
 
 const EventCard = ({ event, bookmarked, onPress, onBookmarkPress }: Props) => {
