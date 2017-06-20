@@ -3402,6 +3402,16 @@ p-locate@^2.0.0:
   dependencies:
     p-limit "^1.1.0"
 
+p-reflect@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-reflect/-/p-reflect-1.0.0.tgz#f4fa1ee1bb546d8eb3ec0321148dfe0a79137bb8"
+
+p-settle@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/p-settle/-/p-settle-2.0.0.tgz#b6cda5ab86e7173639164909b526adcc42b87733"
+  dependencies:
+    p-reflect "^1.0.0"
+
 parse-glob@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/parse-glob/-/parse-glob-3.0.4.tgz#b2c376cfb11f35513badd173ef0bb6e3a388391c"
@@ -3677,6 +3687,14 @@ react-native-vector-icons@^4.0.0:
   dependencies:
     lodash "^4.0.0"
     yargs "^6.3.0"
+
+react-native-version@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-version/-/react-native-version-2.3.1.tgz#5655a8bc6bd6dc87b6c8646d4c5add6bf8f3cb9c"
+  dependencies:
+    chalk "^1.1.3"
+    commander "^2.9.0"
+    p-settle "^2.0.0"
 
 react-native@0.44.0:
   version "0.44.0"

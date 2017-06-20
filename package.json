@@ -1,6 +1,6 @@
 {
   "name": "eventigo-app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -9,7 +9,8 @@
     "precommit": "lint-staged",
     "run-ios-release": "react-native run-ios --configuration Release",
     "run-android-release": "react-native run-android --variant=release",
-    "build-android-release": "cd android && ./gradlew assembleRelease && cd .."
+    "build-android-release": "cd android && ./gradlew assembleRelease && cd ..",
+    "postversion": "react-native-version"
   },
   "lint-staged": {
     "src/**/*.js": [
@@ -29,6 +30,7 @@
     "react-native-google-analytics-bridge": "^5.0.1",
     "react-native-linear-gradient": "^2.0.0",
     "react-native-vector-icons": "^4.0.0",
+    "react-native-version": "^2.3.1",
     "react-navigation": "^1.0.0-beta.9",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
