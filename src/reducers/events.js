@@ -1,10 +1,14 @@
 /* @flow */
 import { tracker } from '../ga';
+import moment from 'moment';
+
 import type { Action } from '../types/actions';
 import type { Event } from '../types/model';
 
+type EventsStateData = { [id: string]: Event };
+
 export type EventsState = {
-  data: { [id: string]: Event },
+  data: EventsStateData,
   dataFetched: boolean,
   isFetching: boolean,
   error: boolean
@@ -47,9 +51,33 @@ function events(
       return { ...state, isFetching: false, error: true };
     }
 
+    case 'persist/REHYDRATE': {
+      const { payload } = action;
+      if (payload.events && payload.events.data) {
+        return {
+          ...state,
+          data: removePastEvents(payload.events.data)
+        };
+      }
+      return state;
+    }
+
     default:
       return state;
   }
+}
+
+function removePastEvents(eventsData: EventsStateData): EventsStateData {
+  let filtered = {};
+  Object.keys(eventsData).map(key => {
+    const event: Event = eventsData[key];
+    if (event.end && moment(event.end).isAfter(moment())) {
+      filtered[key] = event;
+    } else if (moment(event.start).isAfter(moment().subtract(3, 'hours'))) {
+      filtered[key] = event;
+    }
+  });
+  return filtered;
 }
 
 export default events;
