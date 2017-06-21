@@ -1,5 +1,6 @@
 /* @flow */
 import type { EventsData } from './apiData';
+import type { RootState } from '../reducers';
 
 export type ActionTypes =
   | 'TOGGLE_BOOKMARK'
@@ -21,8 +22,11 @@ type FetchEventsFailAction = {
   errorMessage: any
 };
 
+type RehydrateAction = { type: 'persist/REHYDRATE', payload: RootState };
+
 export type Action =
   | ToggleBookmarkAction
   | FetchEventsAction
   | FetchEventsSuccessAction
-  | FetchEventsFailAction;
+  | FetchEventsFailAction
+  | RehydrateAction;
