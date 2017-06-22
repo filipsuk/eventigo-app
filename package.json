@@ -15,7 +15,8 @@
   "lint-staged": {
     "src/**/*.js": [
       "prettier --single-quote --write",
-      "eslint --fix",
+      "eslint --fix --max-warnings 0",
+      "flow",
       "git add"
     ]
   },
