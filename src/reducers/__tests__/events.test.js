@@ -4,7 +4,7 @@ import eventsReducer from '../events';
 import { mockedEvents } from '../../__mocks__/data/mockedEvents';
 import moment from 'moment';
 
-import type { EventsState, EventsStateData } from '../events';
+import type { EventsState } from '../events';
 import type { EventsData } from '../../types/apiData';
 import type { Action } from '../../types/actions';
 import type { Event } from '../../types/model';
