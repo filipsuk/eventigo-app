@@ -5,7 +5,7 @@ import moment from 'moment';
 import type { Action } from '../types/actions';
 import type { Event } from '../types/model';
 
-type EventsStateData = { [id: string]: Event };
+export type EventsStateData = { [id: string]: Event };
 
 export type EventsState = {
   data: EventsStateData,
