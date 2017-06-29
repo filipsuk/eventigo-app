@@ -33,6 +33,7 @@ function events(
     case 'EVENTS_FETCHING_DATA_SUCCESS': {
       let newState = {
         ...state,
+        data: {},
         isFetching: false,
         dataFetched: true,
         error: false
