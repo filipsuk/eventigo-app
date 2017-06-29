@@ -1,6 +1,6 @@
 {
   "name": "eventigo-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -60,7 +60,9 @@
   },
   "jest": {
     "preset": "react-native",
-    "setupFiles": ["./jest-setup.js"],
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-native-navigation)/"
     ]
