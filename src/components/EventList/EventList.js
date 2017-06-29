@@ -32,7 +32,17 @@ const EventList = ({
     <ScrollView style={styles.container}>
       {events.isFetching && <ActivityIndicator style={styles.loader} />}
 
-      {events.dataFetched &&
+      {events.error &&
+        <View style={styles.error}>
+          <Icon
+            name="error"
+            color={colors.dark}
+            containerStyle={styles.errorIcon}
+          />
+          <Text>Chyba načítání</Text>
+        </View>}
+
+      {events.data &&
         Object.keys(events.data).map(id => {
           return (
             <EventCard
@@ -45,15 +55,6 @@ const EventList = ({
           );
         })}
 
-      {events.error &&
-        <View style={styles.error}>
-          <Icon
-            name="error"
-            color={colors.dark}
-            containerStyle={styles.errorIcon}
-          />
-          <Text>Chyba načítání</Text>
-        </View>}
     </ScrollView>
   );
 };
