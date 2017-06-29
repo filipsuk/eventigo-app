@@ -4,15 +4,17 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
 import reducers from './reducers';
-import { createEpicMiddleware } from 'redux-observable';
-import { fetchEventsEpic } from './epics';
+import { createEpicMiddleware, combineEpics } from 'redux-observable';
+import { fetchEventsEpic, foregroundStateEpic } from './epics';
+import applyAppStateListener from 'redux-enhancer-react-native-appstate';
 
-const middlewares = [createEpicMiddleware(fetchEventsEpic)];
+const rootEpic = combineEpics(fetchEventsEpic, foregroundStateEpic);
+const middlewares = [createEpicMiddleware(rootEpic)];
 const enhancers = composeWithDevTools(
   {
     // Options: https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/API/Arguments.md
   }
-)(applyMiddleware(...middlewares), autoRehydrate());
+)(applyAppStateListener(), applyMiddleware(...middlewares), autoRehydrate());
 
 export default function configureStore(initialState: any = {}) {
   const store = createStore(reducers, initialState, enhancers);

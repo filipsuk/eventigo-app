@@ -11,6 +11,7 @@ export type EventsState = {
   data: EventsStateData,
   dataFetched: boolean,
   isFetching: boolean,
+  isFetchingInBackground: boolean,
   error: boolean
 };
 
@@ -18,6 +19,7 @@ const initialState: EventsState = {
   data: {},
   dataFetched: false,
   isFetching: false,
+  isFetchingInBackground: false,
   error: false
 };
 
@@ -27,7 +29,11 @@ function events(
 ): EventsState {
   switch (action.type) {
     case 'EVENTS_FETCHING_DATA': {
-      return { ...state, isFetching: true };
+      return {
+        ...state,
+        isFetching: true,
+        isFetchingInBackground: action.background
+      };
     }
 
     case 'EVENTS_FETCHING_DATA_SUCCESS': {
@@ -35,6 +41,7 @@ function events(
         ...state,
         data: {},
         isFetching: false,
+        isFetchingInBackground: false,
         dataFetched: true,
         error: false
       };
@@ -49,7 +56,12 @@ function events(
       tracker.trackException(
         `EVENTS_FETCHING_DATA_FAILURE: ${action.errorMessage}`
       );
-      return { ...state, isFetching: false, error: true };
+      return {
+        ...state,
+        isFetching: false,
+        isFetchingInBackground: false,
+        error: true
+      };
     }
 
     case 'persist/REHYDRATE': {

@@ -30,7 +30,9 @@ const EventList = ({
   // TODO: Use FlatList after upgrade to RN 0.43
   return (
     <ScrollView style={styles.container}>
-      {events.isFetching && <ActivityIndicator style={styles.loader} />}
+      {events.isFetching &&
+        !events.isFetchingInBackground &&
+        <ActivityIndicator style={styles.loader} />}
 
       {events.error &&
         <View style={styles.error}>

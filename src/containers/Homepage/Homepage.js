@@ -56,7 +56,10 @@ class Homepage extends React.Component {
   render() {
     return (
       <ScrollView>
-        <StatusBar barStyle="light-content" />
+        <StatusBar
+          barStyle="light-content"
+          networkActivityIndicatorVisible={this.props.events.isFetching}
+        />
         <EventList
           events={this.props.events}
           bookmarks={this.props.bookmarks}

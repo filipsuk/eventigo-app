@@ -10,7 +10,7 @@ export type ActionTypes =
 
 type ToggleBookmarkAction = { type: 'TOGGLE_BOOKMARK', id: string };
 
-type FetchEventsAction = { type: 'EVENTS_FETCHING_DATA' };
+type FetchEventsAction = { type: 'EVENTS_FETCHING_DATA', background: boolean };
 
 type FetchEventsSuccessAction = {
   type: 'EVENTS_FETCHING_DATA_SUCCESS',
