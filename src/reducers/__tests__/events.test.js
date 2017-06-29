@@ -14,6 +14,7 @@ describe('events reducer', () => {
     data: {},
     dataFetched: false,
     isFetching: false,
+    isFetchingInBackground: false,
     error: false
   };
 
@@ -83,20 +84,24 @@ describe('events reducer', () => {
           },
           dataFetched: false,
           isFetching: false,
+          isFetchingInBackground: false,
           error: false
         },
         bookmarks: {}
       }
     };
 
-    expect(eventsReducer(undefined, action)).toEqual({
-      data: {
-        '2': currentEvent,
-        '3': futureEvent
-      },
-      dataFetched: false,
-      isFetching: false,
-      error: false
-    });
+    expect(eventsReducer(undefined, action)).toEqual(
+      ({
+        data: {
+          '2': currentEvent,
+          '3': futureEvent
+        },
+        dataFetched: false,
+        isFetching: false,
+        isFetchingInBackground: false,
+        error: false
+      }: EventsState)
+    );
   });
 });
