@@ -7,10 +7,16 @@ Mobile client for events aggregator [Eventigo](https://github.com/eventigo/event
 
 Part of author's Master's thesis: [Methodology for mobile development in React Native](https://vskp.vse.cz/68718_metodika_pro_vyvoj_mobilnich_aplikaci_vreact_native).
 
-## Requirements
+## Download from stores
+Android: https://play.google.com/store/apps/details?id=com.eventigoapp
+
+iOS: https://itunes.apple.com/cz/app/eventigo/id1250600027 
+
+
+## Requirements for development
 - [React Native](http://facebook.github.io/react-native/docs/getting-started.html) (follow iOS and Android guides)
 
-## Setup
+## Development setup
 1. Install dependencies:
 ```bash
 yarn install
