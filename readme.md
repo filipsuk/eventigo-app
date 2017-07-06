@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/filipsuk/eventigo-app.svg?branch=master)](https://travis-ci.org/filipsuk/eventigoApp)
-[![Code Climate](https://codeclimate.com/github/filipsuk/eventigo-app/badges/gpa.svg)](https://codeclimate.com/github/filipsuk/eventigo-app)
-[![Test Coverage](https://codeclimate.com/github/filipsuk/eventigo-app/badges/coverage.svg)](https://codeclimate.com/github/filipsuk/eventigo-app/coverage)
+[![Build Status](https://travis-ci.org/eventigo/eventigo-app.svg?branch=master)](https://travis-ci.org/eventigo/eventigoApp)
+[![Code Climate](https://codeclimate.com/github/eventigo/eventigo-app/badges/gpa.svg)](https://codeclimate.com/github/eventigo/eventigo-app)
+[![Test Coverage](https://codeclimate.com/github/eventigo/eventigo-app/badges/coverage.svg)](https://codeclimate.com/github/eventigo/eventigo-app/coverage)
 
 # Eventigo.cz Mobile App
 Mobile client for events aggregator [Eventigo](https://github.com/eventigo/eventigo-web) written in React Native.

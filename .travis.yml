@@ -4,7 +4,7 @@ node_js:
 
 addons:
   code_climate:
-    repo_token: 5cbadd6241aabeb2ac7441b1de7cf230a8bfac9b374ff2f3867b59852166d860
+    repo_token: a256941e02d7a51acc01cf7f101d561d3f1315eef63dc1f284b6f068ad9c6da5
 
 script: 
   - npm test -- --coverage
