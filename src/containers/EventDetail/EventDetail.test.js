@@ -8,19 +8,25 @@ import eventsReducer from '../../reducers/events';
 import { fetchDataSuccess } from '../../actions/events';
 import { mockedEvents } from '../../__mocks__/data/mockedEvents';
 import { Provider } from 'react-redux';
+import Config from 'react-native-config';
 
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
 import type { RootState } from '../../reducers';
 
-it('renders correctly', () => {
+let store;
+
+beforeAll(() => {
+  Config.HOME_COUNTRY = 'CZ';
   const initialState: RootState = {
     events: eventsReducer(undefined, fetchDataSuccess(mockedEvents)),
     bookmarks: {}
   };
-  let store = configureStore(initialState);
+  store = configureStore(initialState);
+});
 
+it('renders correctly with home country event', () => {
   const navProp = {
     state: {
       params: {
@@ -28,11 +34,26 @@ it('renders correctly', () => {
       }
     }
   };
+  const tree = renderTree(store, navProp);
+  expect(tree).toMatchSnapshot();
+});
 
-  const tree = renderer.create(
-    <Provider store={store}>
+it('renders correctly with foreign country event', () => {
+  const navProp = {
+    state: {
+      params: {
+        event: mockedEvents[4]
+      }
+    }
+  };
+  const tree = renderTree(store, navProp);
+  expect(tree).toMatchSnapshot();
+});
+
+const renderTree = (storeWithEvent, navProp) => {
+  return renderer.create(
+    <Provider store={storeWithEvent}>
       <EventDetail navigation={navProp} />
     </Provider>
   );
-  expect(tree).toMatchSnapshot();
-});
+};

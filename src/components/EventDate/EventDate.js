@@ -3,6 +3,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import moment from 'moment';
 import { capitalize } from '../../utils';
+import Config from 'react-native-config';
 import type { Event } from '../../types/model';
 
 type Props = {
@@ -11,7 +12,15 @@ type Props = {
 };
 
 const EventDate = ({ event, style }: Props) => {
-  return <Text style={style}>{capitalize(formatEventDate(event))}</Text>;
+  return (
+    <Text style={style}>
+      {capitalize(formatEventDate(event))}
+      {event.venue && `, ${event.venue}`}
+      {event.country &&
+        event.country !== Config.HOME_COUNTRY &&
+        `, ${event.country}`}
+    </Text>
+  );
 };
 
 const formatEventDate = (event: Event): ?string => {
