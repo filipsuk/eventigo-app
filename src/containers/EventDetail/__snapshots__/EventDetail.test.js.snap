@@ -1,6 +1,468 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders correctly with foreign country event 1`] = `
+<RCTScrollView>
+  <View>
+    <Image
+      source={
+        Object {
+          "uri": "https://i.imgur.com/FxRuW15.png",
+        }
+      }
+      style={
+        Object {
+          "flexDirection": "column",
+          "height": 180,
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <TouchableOpacity
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingBottom": 20,
+              "paddingHorizontal": 20,
+              "zIndex": 99,
+            },
+            Object {
+              "position": "absolute",
+              "right": 0,
+              "top": -4,
+            },
+          ]
+        }
+      >
+        <View
+          onLongPress={undefined}
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="transparent"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#2E4147",
+                  "fontSize": 30,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </TouchableOpacity>
+    </Image>
+    <View
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2E4147",
+            "fontSize": 22.784,
+            "fontWeight": "300",
+            "marginBottom": 5,
+          }
+        }
+      >
+        Node.js #24 Berlin
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2E4147",
+            "fontSize": 14.224,
+            "fontWeight": "300",
+          }
+        }
+      >
+        Tuesday 18. 7. 2017 18:45
+        , Berlin
+        , DE
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={undefined}
+        style={
+          Array [
+            Object {
+              "color": "#ACACAC",
+              "fontSize": 12.64,
+            },
+            Object {
+              "color": "#2E4147",
+              "marginVertical": 5,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          #
+          programovani
+           
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          #
+          nodejs
+           
+        </Text>
+      </Text>
+      <View
+        activeOpacity={1}
+        containerStyle={
+          Object {
+            "marginHorizontal": -5,
+            "marginVertical": 5,
+          }
+        }
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "flexDirection": "row",
+            },
+            Object {
+              "marginHorizontal": -5,
+              "marginVertical": 5,
+            },
+          ]
+        }
+      >
+        <View
+          activeOpacity={1}
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "flexDirection": "column",
+              },
+              undefined,
+            ]
+          }
+        >
+          <TouchableHighlight
+            Ripple={undefined}
+            SelectableBackground={undefined}
+            SelectableBackgroundBorderless={undefined}
+            activeOpacity={undefined}
+            background={undefined}
+            delayLongPress={undefined}
+            delayPressIn={undefined}
+            delayPressOut={undefined}
+            disabled={false}
+            hitSlop={undefined}
+            onHideUnderlay={undefined}
+            onLayout={undefined}
+            onLongPress={undefined}
+            onPress={[Function]}
+            onPressIn={undefined}
+            onPressOut={undefined}
+            onShowUnderlay={undefined}
+            underlayColor="transparent"
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#9E9E9E",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "marginLeft": 15,
+                    "marginRight": 15,
+                    "padding": 19,
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Object {
+                    "backgroundColor": "#319F97",
+                  },
+                  undefined,
+                  undefined,
+                  Object {
+                    "padding": 12,
+                  },
+                  Object {
+                    "borderRadius": 3,
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                  },
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 18,
+                    },
+                    Array [
+                      Object {
+                        "marginRight": 10,
+                      },
+                      undefined,
+                    ],
+                    Object {
+                      "fontFamily": "FontAwesome",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontFamily": undefined,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 20,
+                      },
+                      undefined,
+                      Object {
+                        "fontSize": 17.5,
+                      },
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                OTEVŘÍT
+              </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+        <View
+          activeOpacity={1}
+          style={
+            Array [
+              Object {
+                "flex": 1,
+                "flexDirection": "column",
+              },
+              undefined,
+            ]
+          }
+        >
+          <TouchableHighlight
+            Ripple={undefined}
+            SelectableBackground={undefined}
+            SelectableBackgroundBorderless={undefined}
+            activeOpacity={undefined}
+            background={undefined}
+            delayLongPress={undefined}
+            delayPressIn={undefined}
+            delayPressOut={undefined}
+            disabled={false}
+            hitSlop={undefined}
+            onHideUnderlay={undefined}
+            onLayout={undefined}
+            onLongPress={undefined}
+            onPress={[Function]}
+            onPressIn={undefined}
+            onPressOut={undefined}
+            onShowUnderlay={undefined}
+            underlayColor="transparent"
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#9E9E9E",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "marginLeft": 15,
+                    "marginRight": 15,
+                    "padding": 19,
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Object {
+                    "backgroundColor": "#319F97",
+                  },
+                  undefined,
+                  undefined,
+                  Object {
+                    "padding": 12,
+                  },
+                  Object {
+                    "borderRadius": 3,
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                  },
+                  undefined,
+                  undefined,
+                ]
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={false}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "white",
+                      "fontSize": 18,
+                    },
+                    Array [
+                      Object {
+                        "marginRight": 10,
+                      },
+                      undefined,
+                    ],
+                    Object {
+                      "fontFamily": "FontAwesome",
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontFamily": undefined,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    Array [
+                      Object {
+                        "color": "white",
+                        "fontSize": 20,
+                      },
+                      undefined,
+                      Object {
+                        "fontSize": 17.5,
+                      },
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                ULOŽIT
+              </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#2E4147",
+            "marginVertical": 5,
+          }
+        }
+      >
+        &lt;p&gt;&lt;b&gt;Talk #1: Large-Scale Container-Based Architectures&lt;/b&gt;&lt;br/&gt;Igor Drobiazko, CTO of elastic.io, will share their own experience with using Node.js for large-scale application and data integration use cases. elastic.io is a startup that has built a microservices-based integration platform as a service with Node.js and currently starts[masked] containers every month.&lt;/p&gt;
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`renders correctly with home country event 1`] = `
 <RCTScrollView>
   <View>
     <Image
@@ -116,6 +578,7 @@ exports[`renders correctly 1`] = `
         }
       >
         Monday 24. 4. 2017 11:00 - 13:00
+        , Praha
       </Text>
       <Text
         accessible={true}

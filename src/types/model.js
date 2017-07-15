@@ -6,7 +6,9 @@ export type Event = {
   description: ?string,
   url: string,
   start: string,
-  end?: string,
+  end?: ?string,
+  venue?: ?string,
+  country?: ?string,
   image: string,
   tags?: EventTag[]
 };
