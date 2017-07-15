@@ -444,19 +444,74 @@ exports[`renders correctly with foreign country event 1`] = `
           </TouchableHighlight>
         </View>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "color": "#2E4147",
             "marginVertical": 5,
           }
         }
       >
-        &lt;p&gt;&lt;b&gt;Talk #1: Large-Scale Container-Based Architectures&lt;/b&gt;&lt;br/&gt;Igor Drobiazko, CTO of elastic.io, will share their own experience with using Node.js for large-scale application and data integration use cases. elastic.io is a startup that has built a microservices-based integration platform as a service with Node.js and currently starts[masked] containers every month.&lt;/p&gt;
-      </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          onPress={null}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            onPress={null}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#2E4147",
+                  },
+                  Array [
+                    Object {
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                  ],
+                ]
+              }
+            >
+              Talk #1: Large-Scale Container-Based Architectures
+            </Text>
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            onPress={null}
+          >
+            
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#2E4147",
+                },
+                Array [
+                  Object {},
+                ],
+              ]
+            }
+          >
+            Igor Drobiazko, CTO of elastic.io, will share their own experience with using Node.js for large-scale application and data integration use cases. elastic.io is a startup that has built a microservices-based integration platform as a service with Node.js and currently starts[masked] containers every month.
+          </Text>
+        </Text>
+      </View>
     </View>
   </View>
 </RCTScrollView>
@@ -923,19 +978,29 @@ exports[`renders correctly with home country event 1`] = `
           </TouchableHighlight>
         </View>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "color": "#2E4147",
             "marginVertical": 5,
           }
         }
       >
-        Lorem ipsum
-      </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#2E4147",
+              },
+              null,
+            ]
+          }
+        >
+          Lorem ipsum
+        </Text>
+      </View>
     </View>
   </View>
 </RCTScrollView>

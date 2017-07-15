@@ -9,6 +9,7 @@ import Bookmark from '../../components/Bookmark';
 import { navigationHeader, fontSizes, colors } from '../../styles';
 import { tracker } from '../../ga';
 import { addEventToCalendar, openUrl } from '../../utils';
+import HTMLView from 'react-native-htmlview';
 
 import type { Event } from '../../types/model';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -93,7 +94,19 @@ class EventDetail extends React.Component {
               />
             </Col>
           </Grid>
-          <Text style={styles.description}>{event.description}</Text>
+
+          <HTMLView
+            value={event.description}
+            style={styles.description}
+            stylesheet={htmlStyles}
+            paragraphBreak=""
+            textComponentProps={{
+              style: {
+                color: colors.dark
+              }
+            }}
+          />
+
         </View>
       </ScrollView>
     );
@@ -125,7 +138,6 @@ const styles = StyleSheet.create({
     marginVertical: 5
   },
   description: {
-    color: colors.dark,
     marginVertical: 5
   },
   buttons: {
@@ -141,6 +153,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 0,
     top: -4
+  }
+});
+
+const htmlStyles = StyleSheet.create({
+  a: {
+    fontWeight: '300',
+    color: colors.primary
   }
 });
 
