@@ -21,7 +21,12 @@ beforeAll(() => {
   Config.HOME_COUNTRY = 'CZ';
   const initialState: RootState = {
     events: eventsReducer(undefined, fetchDataSuccess(mockedEvents)),
-    bookmarks: {}
+    bookmarks: {},
+    statistics: {
+      launches: 0,
+      requestedReviewDate: null,
+      positiveEvents: 0
+    }
   };
   store = configureStore(initialState);
 });

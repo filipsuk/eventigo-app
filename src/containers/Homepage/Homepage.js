@@ -21,6 +21,7 @@ type Props = {
   bookmarks: BookmarksState,
   onBookmarkPress: string => any,
   fetchEvents: () => void,
+  appLaunch: () => void,
   navigation: NavigationScreenProp<NavigationLeafRoute, NavigationAction>
 };
 
@@ -50,6 +51,7 @@ class Homepage extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvents();
+    this.props.appLaunch();
     tracker.trackScreenView(this.props.navigation.state.routeName);
   }
 

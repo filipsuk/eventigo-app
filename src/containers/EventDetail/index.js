@@ -1,7 +1,7 @@
 /* @flow */
 import EventDetail from './EventDetail';
 import { connect } from 'react-redux';
-import { toggleBookmark } from '../../actions/bookmark';
+import { toggleBookmark, addPositiveEvent } from '../../actions';
 
 const mapStateToProps: mapStateToProps = state => {
   return {
@@ -13,6 +13,13 @@ const mapDispatchToProps: mapDispatchToProps = dispatch => {
   return {
     onBookmarkPress: id => {
       dispatch(toggleBookmark(id));
+      dispatch(addPositiveEvent());
+    },
+    onOpenSource: () => {
+      dispatch(addPositiveEvent());
+    },
+    onAddToCalendar: () => {
+      dispatch(addPositiveEvent());
     }
   };
 };

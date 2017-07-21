@@ -5,10 +5,18 @@ import { persistStore, autoRehydrate } from 'redux-persist';
 import { AsyncStorage } from 'react-native';
 import reducers from './reducers';
 import { createEpicMiddleware, combineEpics } from 'redux-observable';
-import { fetchEventsEpic, foregroundStateEpic } from './epics';
+import {
+  fetchEventsEpic,
+  foregroundStateEpic,
+  requestReviewEpic
+} from './epics';
 import applyAppStateListener from 'redux-enhancer-react-native-appstate';
 
-const rootEpic = combineEpics(fetchEventsEpic, foregroundStateEpic);
+const rootEpic = combineEpics(
+  fetchEventsEpic,
+  foregroundStateEpic,
+  requestReviewEpic
+);
 const middlewares = [createEpicMiddleware(rootEpic)];
 const enhancers = composeWithDevTools(
   {

@@ -1,7 +1,7 @@
 /* @flow */
 import Homepage from './Homepage';
 import { connect } from 'react-redux';
-import { toggleBookmark, fetchData } from '../../actions';
+import { toggleBookmark, fetchData, appLaunch } from '../../actions';
 
 const mapStateToProps: mapStateToProps = state => {
   return {
@@ -17,6 +17,9 @@ const mapDispatchToProps: mapDispatchToProps = dispatch => {
     },
     fetchEvents: () => {
       dispatch(fetchData());
+    },
+    appLaunch: () => {
+      dispatch(appLaunch());
     }
   };
 };

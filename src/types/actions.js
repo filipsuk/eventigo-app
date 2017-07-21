@@ -6,7 +6,10 @@ export type ActionTypes =
   | 'TOGGLE_BOOKMARK'
   | 'EVENTS_FETCHING_DATA'
   | 'EVENTS_FETCHING_DATA_SUCCESS'
-  | 'EVENTS_FETCHING_DATA_FAILURE';
+  | 'EVENTS_FETCHING_DATA_FAILURE'
+  | 'ADD_LAUNCH'
+  | 'ADD_POSITIVE_EVENT'
+  | 'ASKED_FOR_REVIEW';
 
 type ToggleBookmarkAction = { type: 'TOGGLE_BOOKMARK', id: string };
 
@@ -24,9 +27,16 @@ type FetchEventsFailAction = {
 
 type RehydrateAction = { type: 'persist/REHYDRATE', payload: RootState };
 
+type AppLaunchAction = { type: 'APP_LAUNCH' };
+type AddPositiveEventAction = { type: 'ADD_POSITIVE_EVENT' };
+type AskedForReviewAction = { type: 'ASKED_FOR_REVIEW' };
+
 export type Action =
   | ToggleBookmarkAction
   | FetchEventsAction
   | FetchEventsSuccessAction
   | FetchEventsFailAction
-  | RehydrateAction;
+  | RehydrateAction
+  | AppLaunchAction
+  | AddPositiveEventAction
+  | AskedForReviewAction;
