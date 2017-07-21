@@ -1,5 +1,6 @@
 /* @flow */
 import fetchEventsEpic from './fetchEventsEpic';
 import foregroundStateEpic from './foregroundStateEpic';
+import requestReviewEpic from './requestReviewEpic';
 
-export { fetchEventsEpic, foregroundStateEpic };
+export { fetchEventsEpic, foregroundStateEpic, requestReviewEpic };

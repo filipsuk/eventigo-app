@@ -87,7 +87,12 @@ describe('events reducer', () => {
           isFetchingInBackground: false,
           error: false
         },
-        bookmarks: {}
+        bookmarks: {},
+        statistics: {
+          launches: 0,
+          requestedReviewDate: null,
+          positiveEvents: 0
+        }
       }
     };
 

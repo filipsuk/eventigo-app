@@ -24,7 +24,9 @@ type Props = {
     }
   },
   bookmarks: BookmarksState,
-  onBookmarkPress: string => any
+  onBookmarkPress: string => any,
+  onOpenSource: void => void,
+  onAddToCalendar: void => void
 };
 
 class EventDetail extends React.Component {
@@ -43,11 +45,13 @@ class EventDetail extends React.Component {
     const { url } = this.props.navigation.state.params.event;
     openUrl(url);
     tracker.trackEvent('Detail', 'Open event source');
+    this.props.onOpenSource();
   };
 
   handleAddToCalendar = () => {
     addEventToCalendar(this.props.navigation.state.params.event);
     tracker.trackEvent('Detail', 'Add to calendar');
+    this.props.onAddToCalendar();
   };
 
   handleBookmarkPress = (id: string) => {

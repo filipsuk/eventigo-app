@@ -1,4 +1,13 @@
 /* @flow */
 import { toggleBookmark } from './bookmark';
 import { fetchData, fetchDataSuccess, fetchDataFailure } from './events';
-export { toggleBookmark, fetchData, fetchDataSuccess, fetchDataFailure };
+import { appLaunch, addPositiveEvent, askedForReview } from './statistics';
+export {
+  toggleBookmark,
+  fetchData,
+  fetchDataSuccess,
+  fetchDataFailure,
+  appLaunch,
+  addPositiveEvent,
+  askedForReview
+};
