@@ -55,3 +55,4 @@ const requestReview = () => {
 };
 
 export default requestReviewEpic;
+export { MIN_LAUNCHES, MIN_POSITIVE_EVENTS, WEEKS_BETWEEN_ASKING };
