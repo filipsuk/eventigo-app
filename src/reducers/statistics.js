@@ -41,7 +41,9 @@ function statistics(
         return {
           ...state,
           ...payload.statistics,
-          launches: state.launches + payload.statistics.launches
+          launches: state.launches + payload.statistics.launches,
+          positiveEvents:
+            state.positiveEvents + payload.statistics.positiveEvents
         };
       }
       return state;

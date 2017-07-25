@@ -11,7 +11,7 @@ import type { StatisticsState } from './statistics';
 export type RootState = {
   events: EventsState,
   bookmarks: BookmarksState,
-  statistics: StatisticsState
+  statistics?: StatisticsState
 };
 
 export default combineReducers({
