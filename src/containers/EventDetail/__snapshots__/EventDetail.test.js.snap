@@ -35,7 +35,6 @@ exports[`renders correctly with foreign country event 1`] = `
         }
       >
         <View
-          onLongPress={undefined}
           onPress={undefined}
           style={
             Array [
@@ -189,126 +188,124 @@ exports[`renders correctly with foreign country event 1`] = `
             ]
           }
         >
-          <TouchableHighlight
-            Ripple={undefined}
-            SelectableBackground={undefined}
-            SelectableBackgroundBorderless={undefined}
-            activeOpacity={undefined}
-            background={undefined}
-            delayLongPress={undefined}
-            delayPressIn={undefined}
-            delayPressOut={undefined}
-            disabled={false}
-            hitSlop={undefined}
-            onHideUnderlay={undefined}
-            onLayout={undefined}
-            onLongPress={undefined}
-            onPress={[Function]}
-            onPressIn={undefined}
-            onPressOut={undefined}
-            onShowUnderlay={undefined}
-            underlayColor="transparent"
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "marginLeft": 15,
+                  "marginRight": 15,
+                },
+                undefined,
+                undefined,
+              ]
+            }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#9E9E9E",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                    "marginLeft": 15,
-                    "marginRight": 15,
-                    "padding": 19,
-                  },
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  Object {
-                    "backgroundColor": "#319F97",
-                  },
-                  undefined,
-                  undefined,
-                  Object {
-                    "padding": 12,
-                  },
-                  Object {
-                    "borderRadius": 3,
-                    "marginLeft": 5,
-                    "marginRight": 5,
-                  },
-                  undefined,
-                  undefined,
-                ]
-              }
+            <TouchableHighlight
+              disabled={false}
+              onPress={[Function]}
+              underlayColor="transparent"
             >
-              <Text
-                accessible={true}
-                allowFontScaling={false}
-                ellipsizeMode="tail"
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "white",
-                      "fontSize": 18,
+                      "alignItems": "center",
+                      "backgroundColor": "#9E9E9E",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "padding": 19,
                     },
-                    Array [
-                      Object {
-                        "marginRight": 10,
-                      },
-                      undefined,
-                    ],
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
                     Object {
-                      "fontFamily": "FontAwesome",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
+                      "backgroundColor": "#319F97",
                     },
+                    undefined,
+                    Object {
+                      "padding": 12,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    Object {
+                      "borderRadius": 3,
+                      "marginLeft": 5,
+                      "marginRight": 5,
+                    },
+                    undefined,
+                    undefined,
                   ]
                 }
               >
-                
-              </Text>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "fontFamily": undefined,
-                    },
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
                     Array [
                       Object {
                         "color": "white",
-                        "fontSize": 20,
+                        "fontSize": 18,
                       },
-                      undefined,
+                      Array [
+                        Object {
+                          "marginRight": 10,
+                        },
+                        undefined,
+                      ],
                       Object {
-                        "fontSize": 17.5,
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
                       },
+                    ]
+                  }
+                  type="font-awesome"
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {},
                       undefined,
                       undefined,
                       undefined,
                       undefined,
-                    ],
-                  ]
-                }
-              >
-                OTEVŘÍT
-              </Text>
-            </View>
-          </TouchableHighlight>
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 20,
+                        },
+                        undefined,
+                        Object {
+                          "fontSize": 17.5,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  OTEVŘÍT
+                </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
         <View
           activeOpacity={1}
@@ -322,126 +319,124 @@ exports[`renders correctly with foreign country event 1`] = `
             ]
           }
         >
-          <TouchableHighlight
-            Ripple={undefined}
-            SelectableBackground={undefined}
-            SelectableBackgroundBorderless={undefined}
-            activeOpacity={undefined}
-            background={undefined}
-            delayLongPress={undefined}
-            delayPressIn={undefined}
-            delayPressOut={undefined}
-            disabled={false}
-            hitSlop={undefined}
-            onHideUnderlay={undefined}
-            onLayout={undefined}
-            onLongPress={undefined}
-            onPress={[Function]}
-            onPressIn={undefined}
-            onPressOut={undefined}
-            onShowUnderlay={undefined}
-            underlayColor="transparent"
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "marginLeft": 15,
+                  "marginRight": 15,
+                },
+                undefined,
+                undefined,
+              ]
+            }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#9E9E9E",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                    "marginLeft": 15,
-                    "marginRight": 15,
-                    "padding": 19,
-                  },
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  Object {
-                    "backgroundColor": "#319F97",
-                  },
-                  undefined,
-                  undefined,
-                  Object {
-                    "padding": 12,
-                  },
-                  Object {
-                    "borderRadius": 3,
-                    "marginLeft": 5,
-                    "marginRight": 5,
-                  },
-                  undefined,
-                  undefined,
-                ]
-              }
+            <TouchableHighlight
+              disabled={false}
+              onPress={[Function]}
+              underlayColor="transparent"
             >
-              <Text
-                accessible={true}
-                allowFontScaling={false}
-                ellipsizeMode="tail"
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "white",
-                      "fontSize": 18,
+                      "alignItems": "center",
+                      "backgroundColor": "#9E9E9E",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "padding": 19,
                     },
-                    Array [
-                      Object {
-                        "marginRight": 10,
-                      },
-                      undefined,
-                    ],
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
                     Object {
-                      "fontFamily": "FontAwesome",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
+                      "backgroundColor": "#319F97",
                     },
+                    undefined,
+                    Object {
+                      "padding": 12,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    Object {
+                      "borderRadius": 3,
+                      "marginLeft": 5,
+                      "marginRight": 5,
+                    },
+                    undefined,
+                    undefined,
                   ]
                 }
               >
-                
-              </Text>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "fontFamily": undefined,
-                    },
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
                     Array [
                       Object {
                         "color": "white",
-                        "fontSize": 20,
+                        "fontSize": 18,
                       },
-                      undefined,
+                      Array [
+                        Object {
+                          "marginRight": 10,
+                        },
+                        undefined,
+                      ],
                       Object {
-                        "fontSize": 17.5,
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
                       },
+                    ]
+                  }
+                  type="font-awesome"
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {},
                       undefined,
                       undefined,
                       undefined,
                       undefined,
-                    ],
-                  ]
-                }
-              >
-                ULOŽIT
-              </Text>
-            </View>
-          </TouchableHighlight>
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 20,
+                        },
+                        undefined,
+                        Object {
+                          "fontSize": 17.5,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  ULOŽIT
+                </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
       <View
@@ -455,13 +450,17 @@ exports[`renders correctly with foreign country event 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onLongPress={null}
           onPress={null}
+          style={undefined}
         >
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
+            style={null}
           >
             <Text
               accessible={true}
@@ -472,12 +471,9 @@ exports[`renders correctly with foreign country event 1`] = `
                   Object {
                     "color": "#2E4147",
                   },
-                  Array [
-                    Object {
-                      "fontWeight": "500",
-                    },
-                    Object {},
-                  ],
+                  Object {
+                    "fontWeight": "500",
+                  },
                 ]
               }
             >
@@ -488,7 +484,9 @@ exports[`renders correctly with foreign country event 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            onLongPress={null}
             onPress={null}
+            style={null}
           >
             
             
@@ -502,9 +500,7 @@ exports[`renders correctly with foreign country event 1`] = `
                 Object {
                   "color": "#2E4147",
                 },
-                Array [
-                  Object {},
-                ],
+                Object {},
               ]
             }
           >
@@ -552,7 +548,6 @@ exports[`renders correctly with home country event 1`] = `
         }
       >
         <View
-          onLongPress={undefined}
           onPress={undefined}
           style={
             Array [
@@ -723,126 +718,124 @@ exports[`renders correctly with home country event 1`] = `
             ]
           }
         >
-          <TouchableHighlight
-            Ripple={undefined}
-            SelectableBackground={undefined}
-            SelectableBackgroundBorderless={undefined}
-            activeOpacity={undefined}
-            background={undefined}
-            delayLongPress={undefined}
-            delayPressIn={undefined}
-            delayPressOut={undefined}
-            disabled={false}
-            hitSlop={undefined}
-            onHideUnderlay={undefined}
-            onLayout={undefined}
-            onLongPress={undefined}
-            onPress={[Function]}
-            onPressIn={undefined}
-            onPressOut={undefined}
-            onShowUnderlay={undefined}
-            underlayColor="transparent"
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "marginLeft": 15,
+                  "marginRight": 15,
+                },
+                undefined,
+                undefined,
+              ]
+            }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#9E9E9E",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                    "marginLeft": 15,
-                    "marginRight": 15,
-                    "padding": 19,
-                  },
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  Object {
-                    "backgroundColor": "#319F97",
-                  },
-                  undefined,
-                  undefined,
-                  Object {
-                    "padding": 12,
-                  },
-                  Object {
-                    "borderRadius": 3,
-                    "marginLeft": 5,
-                    "marginRight": 5,
-                  },
-                  undefined,
-                  undefined,
-                ]
-              }
+            <TouchableHighlight
+              disabled={false}
+              onPress={[Function]}
+              underlayColor="transparent"
             >
-              <Text
-                accessible={true}
-                allowFontScaling={false}
-                ellipsizeMode="tail"
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "white",
-                      "fontSize": 18,
+                      "alignItems": "center",
+                      "backgroundColor": "#9E9E9E",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "padding": 19,
                     },
-                    Array [
-                      Object {
-                        "marginRight": 10,
-                      },
-                      undefined,
-                    ],
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
                     Object {
-                      "fontFamily": "FontAwesome",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
+                      "backgroundColor": "#319F97",
                     },
+                    undefined,
+                    Object {
+                      "padding": 12,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    Object {
+                      "borderRadius": 3,
+                      "marginLeft": 5,
+                      "marginRight": 5,
+                    },
+                    undefined,
+                    undefined,
                   ]
                 }
               >
-                
-              </Text>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "fontFamily": undefined,
-                    },
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
                     Array [
                       Object {
                         "color": "white",
-                        "fontSize": 20,
+                        "fontSize": 18,
                       },
-                      undefined,
+                      Array [
+                        Object {
+                          "marginRight": 10,
+                        },
+                        undefined,
+                      ],
                       Object {
-                        "fontSize": 17.5,
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
                       },
+                    ]
+                  }
+                  type="font-awesome"
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {},
                       undefined,
                       undefined,
                       undefined,
                       undefined,
-                    ],
-                  ]
-                }
-              >
-                OTEVŘÍT
-              </Text>
-            </View>
-          </TouchableHighlight>
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 20,
+                        },
+                        undefined,
+                        Object {
+                          "fontSize": 17.5,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  OTEVŘÍT
+                </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
         <View
           activeOpacity={1}
@@ -856,126 +849,124 @@ exports[`renders correctly with home country event 1`] = `
             ]
           }
         >
-          <TouchableHighlight
-            Ripple={undefined}
-            SelectableBackground={undefined}
-            SelectableBackgroundBorderless={undefined}
-            activeOpacity={undefined}
-            background={undefined}
-            delayLongPress={undefined}
-            delayPressIn={undefined}
-            delayPressOut={undefined}
-            disabled={false}
-            hitSlop={undefined}
-            onHideUnderlay={undefined}
-            onLayout={undefined}
-            onLongPress={undefined}
-            onPress={[Function]}
-            onPressIn={undefined}
-            onPressOut={undefined}
-            onShowUnderlay={undefined}
-            underlayColor="transparent"
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "marginLeft": 15,
+                  "marginRight": 15,
+                },
+                undefined,
+                undefined,
+              ]
+            }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "backgroundColor": "#9E9E9E",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
-                    "marginLeft": 15,
-                    "marginRight": 15,
-                    "padding": 19,
-                  },
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  undefined,
-                  Object {
-                    "backgroundColor": "#319F97",
-                  },
-                  undefined,
-                  undefined,
-                  Object {
-                    "padding": 12,
-                  },
-                  Object {
-                    "borderRadius": 3,
-                    "marginLeft": 5,
-                    "marginRight": 5,
-                  },
-                  undefined,
-                  undefined,
-                ]
-              }
+            <TouchableHighlight
+              disabled={false}
+              onPress={[Function]}
+              underlayColor="transparent"
             >
-              <Text
-                accessible={true}
-                allowFontScaling={false}
-                ellipsizeMode="tail"
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "white",
-                      "fontSize": 18,
+                      "alignItems": "center",
+                      "backgroundColor": "#9E9E9E",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                      "padding": 19,
                     },
-                    Array [
-                      Object {
-                        "marginRight": 10,
-                      },
-                      undefined,
-                    ],
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
+                    undefined,
                     Object {
-                      "fontFamily": "FontAwesome",
-                      "fontStyle": "normal",
-                      "fontWeight": "normal",
+                      "backgroundColor": "#319F97",
                     },
+                    undefined,
+                    Object {
+                      "padding": 12,
+                    },
+                    undefined,
+                    undefined,
+                    undefined,
+                    Object {
+                      "borderRadius": 3,
+                      "marginLeft": 5,
+                      "marginRight": 5,
+                    },
+                    undefined,
+                    undefined,
                   ]
                 }
               >
-                
-              </Text>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "fontFamily": undefined,
-                    },
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
-                    undefined,
+                <Text
+                  accessible={true}
+                  allowFontScaling={false}
+                  ellipsizeMode="tail"
+                  style={
                     Array [
                       Object {
                         "color": "white",
-                        "fontSize": 20,
+                        "fontSize": 18,
                       },
-                      undefined,
+                      Array [
+                        Object {
+                          "marginRight": 10,
+                        },
+                        undefined,
+                      ],
                       Object {
-                        "fontSize": 17.5,
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
                       },
+                    ]
+                  }
+                  type="font-awesome"
+                >
+                  
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {},
                       undefined,
                       undefined,
                       undefined,
                       undefined,
-                    ],
-                  ]
-                }
-              >
-                ULOŽIT
-              </Text>
-            </View>
-          </TouchableHighlight>
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      undefined,
+                      Array [
+                        Object {
+                          "color": "white",
+                          "fontSize": 20,
+                        },
+                        undefined,
+                        Object {
+                          "fontSize": 17.5,
+                        },
+                        undefined,
+                        undefined,
+                        undefined,
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  ULOŽIT
+                </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
       <View
