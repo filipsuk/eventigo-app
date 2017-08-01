@@ -56,7 +56,6 @@ const EventList = ({
             />
           );
         })}
-
     </ScrollView>
   );
 };

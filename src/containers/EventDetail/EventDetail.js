@@ -110,7 +110,6 @@ class EventDetail extends React.Component {
               }
             }}
           />
-
         </View>
       </ScrollView>
     );
