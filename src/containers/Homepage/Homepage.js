@@ -5,6 +5,7 @@ import { ScrollView, StatusBar } from 'react-native';
 import EventList from '../../components/EventList';
 import { navigationHeader } from '../../styles';
 import { tracker } from '../../ga';
+import { colors } from '../../styles';
 
 import type { Event } from '../../types/model';
 import type {
@@ -57,7 +58,7 @@ class Homepage extends React.Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={{ backgroundColor: colors.darkBlue }}>
         <StatusBar
           barStyle="light-content"
           networkActivityIndicatorVisible={this.props.events.isFetching}

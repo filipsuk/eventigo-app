@@ -61,4 +61,32 @@ const openUrl = async (url: string): Promise<any> => {
   }
 };
 
-export { capitalize, addEventToCalendar, openUrl };
+const tomorrow = moment().add(1, 'days').startOf('day');
+const eventDateUtils = {
+  eventIsToday: (event: Event | any): boolean =>
+    moment(event.start).isSame(moment(), 'day'),
+
+  eventIsTomorrow: (event: Event | any): boolean =>
+    moment(event.start).isSame(tomorrow, 'day'),
+
+  eventIsThisWeek: (event: Event | any): boolean =>
+    moment(event.start).isSame(moment(), 'week') &&
+    moment(event.start).isSameOrAfter(tomorrow.endOf('day')),
+
+  eventIsNextWeek: (event: Event | any): boolean =>
+    moment(event.start).isBetween(
+      moment().endOf('week'),
+      moment().add(1, 'w').endOf('week')
+    ),
+
+  eventIsThisMonth: (event: Event | any): boolean =>
+    moment(event.start).isBetween(
+      moment().add(1, 'w').endOf('week'),
+      moment().endOf('month')
+    ),
+
+  eventIsAfterThisMonth: (event: Event | any): boolean =>
+    moment(event.start).isAfter(moment().endOf('month'))
+};
+
+export { capitalize, addEventToCalendar, openUrl, eventDateUtils };

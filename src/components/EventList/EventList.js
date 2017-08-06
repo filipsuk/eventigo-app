@@ -2,14 +2,15 @@
 import React from 'react';
 import {
   StyleSheet,
-  ScrollView,
   ActivityIndicator,
   View,
-  Text
+  Text,
+  SectionList
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 import EventCard from '../../components/EventCard';
-import { colors } from '../../styles';
+import { colors, fontSizes } from '../../styles';
+import { eventDateUtils } from '../../utils';
 import type { Event } from '../../types/model';
 import type { EventsState } from '../../reducers/events';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -27,9 +28,58 @@ const EventList = ({
   onEventPress,
   onBookmarkPress
 }: Props) => {
-  // TODO: Use FlatList after upgrade to RN 0.43
+  const renderListItem = ({ item }) => {
+    return (
+      <EventCard
+        event={item}
+        bookmarked={bookmarks[item.id] || false}
+        onPress={onEventPress}
+        onBookmarkPress={onBookmarkPress}
+        key={item.id}
+      />
+    );
+  };
+
+  const renderSectionHeader = ({ section }) =>
+    <Text style={styles.listHeader}>
+      {section.key}
+    </Text>;
+
+  const mapEventsToSections = (eventsState: EventsState) => {
+    const eventsArr = Object.values(eventsState.data);
+    const sections = [
+      {
+        data: eventsArr.filter(event => eventDateUtils.eventIsToday(event)),
+        key: 'Dnes'
+      },
+      {
+        data: eventsArr.filter(event => eventDateUtils.eventIsTomorrow(event)),
+        key: 'Zítra'
+      },
+      {
+        data: eventsArr.filter(event => eventDateUtils.eventIsThisWeek(event)),
+        key: 'Tento týden'
+      },
+      {
+        data: eventsArr.filter(event => eventDateUtils.eventIsNextWeek(event)),
+        key: 'Příští týden'
+      },
+      {
+        data: eventsArr.filter(event => eventDateUtils.eventIsThisMonth(event)),
+        key: 'Tento měsíc'
+      },
+      {
+        data: eventsArr.filter(event =>
+          eventDateUtils.eventIsAfterThisMonth(event)
+        ),
+        key: 'Další'
+      }
+    ];
+    return sections.filter(section => section.data.length);
+  };
+
   return (
-    <ScrollView style={styles.container}>
+    <View>
       {events.isFetching &&
         !events.isFetchingInBackground &&
         <ActivityIndicator style={styles.loader} />}
@@ -45,23 +95,19 @@ const EventList = ({
         </View>}
 
       {events.data &&
-        Object.keys(events.data).map(id => {
-          return (
-            <EventCard
-              event={events.data[id]}
-              bookmarked={bookmarks[id] || false}
-              onPress={onEventPress}
-              onBookmarkPress={onBookmarkPress}
-              key={id}
-            />
-          );
-        })}
-    </ScrollView>
+        !!Object.keys(events.data).length &&
+        <SectionList
+          renderItem={renderListItem}
+          renderSectionHeader={renderSectionHeader}
+          sections={mapEventsToSections(events)}
+          refreshing={events.isFetching && !events.isFetchingInBackground}
+          stickySectionHeadersEnabled={true}
+        />}
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {},
   loader: {
     margin: 30
   },
@@ -73,6 +119,14 @@ const styles = StyleSheet.create({
   },
   errorIcon: {
     marginRight: 5
+  },
+  listHeader: {
+    color: colors.white,
+    backgroundColor: colors.darkBlue,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    fontWeight: 'bold',
+    fontSize: fontSizes.smaller
   }
 });
 
