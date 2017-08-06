@@ -68,25 +68,27 @@ exports[`renders correctly 1`] = `
           }
         }
       >
-        <RCTScrollView>
+        <RCTScrollView
+          style={
+            Object {
+              "backgroundColor": "#162B33",
+            }
+          }
+        >
           <View>
-            <RCTScrollView
-              style={Object {}}
-            >
-              <View>
-                <ActivityIndicator
-                  animating={true}
-                  color="#999999"
-                  hidesWhenStopped={true}
-                  size="small"
-                  style={
-                    Object {
-                      "margin": 30,
-                    }
+            <View>
+              <ActivityIndicator
+                animating={true}
+                color="#999999"
+                hidesWhenStopped={true}
+                size="small"
+                style={
+                  Object {
+                    "margin": 30,
                   }
-                />
-              </View>
-            </RCTScrollView>
+                }
+              />
+            </View>
           </View>
         </RCTScrollView>
       </View>
