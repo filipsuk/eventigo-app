@@ -46,7 +46,6 @@ const recentlyAskedForReview = (statistics: StatisticsState): boolean => {
 
 const requestReview = () => {
   if (StoreReview.isAvailable) {
-    console.log('Trying to ask for review');
     StoreReview.requestReview();
     tracker.trackEvent('Rating', 'Tried asking for review');
   } else {
