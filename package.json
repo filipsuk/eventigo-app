@@ -1,6 +1,6 @@
 {
   "name": "eventigo-app",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -63,8 +63,15 @@
   },
   "jest": {
     "preset": "react-native",
-    "coverageReporters": ["json", "lcov", "text", "html"],
-    "setupFiles": ["./jest-setup.js"],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ],
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-native-navigation)/"
     ]
