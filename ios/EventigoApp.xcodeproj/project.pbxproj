@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -53,8 +54,8 @@
 		D369335815774A53A280CBE8 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31D890F02234455FAB8C9FD5 /* EvilIcons.ttf */; };
 		E0F9F04230D04AFC9600AFD1 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6390C4EC5D184385BF1F8E70 /* Octicons.ttf */; };
 		E1E567C1A688411E871A242E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA3ED1FAB84E4801B3D8A596 /* Zocial.ttf */; };
-		EB173BF475F9453B805DCB2B /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629F763C2E834913AE94A29D /* libRCTGoogleAnalyticsBridge.a */; };
 		E77426D08C6A4AE3BE6E12A3 /* libRNStoreReview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 213B378555EE4290A491DD3B /* libRNStoreReview.a */; };
+		EB173BF475F9453B805DCB2B /* libRCTGoogleAnalyticsBridge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629F763C2E834913AE94A29D /* libRCTGoogleAnalyticsBridge.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		AD1468A31F38A23400FC6B06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1522FA50F4A2417F9DD4A19C /* RNStoreReview.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNStoreReview;
+		};
 		AD3975A91EF1746E000DFE38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FDB1DA664C340608BCCCB17 /* RNAddCalendarEvent.xcodeproj */;
@@ -305,8 +313,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EventigoApp/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		14F77D0B3A9747268DEA0760 /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
+		1522FA50F4A2417F9DD4A19C /* RNStoreReview.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNStoreReview.xcodeproj; path = "../node_modules/react-native-store-review/ios/RNStoreReview.xcodeproj"; sourceTree = "<group>"; };
 		1FDB1DA664C340608BCCCB17 /* RNAddCalendarEvent.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNAddCalendarEvent.xcodeproj; path = "../node_modules/react-native-add-calendar-event/ios/RNAddCalendarEvent.xcodeproj"; sourceTree = "<group>"; };
 		2094B88DD78949BD8108B7DA /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
+		213B378555EE4290A491DD3B /* libRNStoreReview.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNStoreReview.a; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* EventigoApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EventigoApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* EventigoApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EventigoApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D890F02234455FAB8C9FD5 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
@@ -333,8 +343,6 @@
 		C8DAF0DFEAB5480AA7E7C0C4 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		E9F7534D47C442A687EB8651 /* RCTGoogleAnalyticsBridge.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTGoogleAnalyticsBridge.xcodeproj; path = "../node_modules/react-native-google-analytics-bridge/ios/RCTGoogleAnalyticsBridge/RCTGoogleAnalyticsBridge.xcodeproj"; sourceTree = "<group>"; };
 		F5E30E8F5D7E4DE39B2F2761 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		1522FA50F4A2417F9DD4A19C /* RNStoreReview.xcodeproj */ = {isa = PBXFileReference; name = "RNStoreReview.xcodeproj"; path = "../node_modules/react-native-store-review/ios/RNStoreReview.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		213B378555EE4290A491DD3B /* libRNStoreReview.a */ = {isa = PBXFileReference; name = "libRNStoreReview.a"; path = "libRNStoreReview.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,6 +606,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AD1468831F38A23400FC6B06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD1468A41F38A23400FC6B06 /* libRNStoreReview.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AD39758A1EF1746E000DFE38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -828,6 +844,10 @@
 					ProjectRef = 1FDB1DA664C340608BCCCB17 /* RNAddCalendarEvent.xcodeproj */;
 				},
 				{
+					ProductGroup = AD1468831F38A23400FC6B06 /* Products */;
+					ProjectRef = 1522FA50F4A2417F9DD4A19C /* RNStoreReview.xcodeproj */;
+				},
+				{
 					ProductGroup = AD9DC0E51ED3925800487636 /* Products */;
 					ProjectRef = 34609972B34D46469CE591FE /* RNVectorIcons.xcodeproj */;
 				},
@@ -1016,6 +1036,13 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AD1468A41F38A23400FC6B06 /* libRNStoreReview.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNStoreReview.a;
+			remoteRef = AD1468A31F38A23400FC6B06 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		AD3975AA1EF1746E000DFE38 /* libRNAddCalendarEvent.a */ = {
