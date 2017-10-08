@@ -590,6 +590,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				45DEB56F0CC34B219CD4A837 /* Resources */,
 				ADB5F0731EE4AD3A00E25E61 /* Frameworks */,
+				ADB86C811F8A7AFE00496898 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -663,6 +664,19 @@
 				ADB5F0741EE4AD3A00E25E61 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADB86C811F8A7AFE00496898 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B4DF2CD7A8744AEFA0B62052 /* libReactNativeConfig.a */,
+				14F77D0B3A9747268DEA0760 /* libBVLinearGradient.a */,
+				8FBE9B6466E140969918F79F /* libRNVectorIcons.a */,
+				629F763C2E834913AE94A29D /* libRCTGoogleAnalyticsBridge.a */,
+				C0A62B7834E549FCA0E9034D /* libRNAddCalendarEvent.a */,
+				213B378555EE4290A491DD3B /* libRNStoreReview.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1301,7 +1315,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
@@ -1334,7 +1348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
