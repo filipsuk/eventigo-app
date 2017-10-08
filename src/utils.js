@@ -62,31 +62,33 @@ const openUrl = async (url: string): Promise<any> => {
 };
 
 const tomorrow = moment().add(1, 'days').startOf('day');
-const eventDateUtils = {
-  eventIsToday: (event: Event | any): boolean =>
+const eventDateSections = {
+  today: (event: Event | any): boolean =>
     moment(event.start).isSame(moment(), 'day'),
 
-  eventIsTomorrow: (event: Event | any): boolean =>
+  tomorrow: (event: Event | any): boolean =>
     moment(event.start).isSame(tomorrow, 'day'),
 
-  eventIsThisWeek: (event: Event | any): boolean =>
+  thisWeek: (event: Event | any): boolean =>
     moment(event.start).isSame(moment(), 'week') &&
     moment(event.start).isSameOrAfter(tomorrow.endOf('day')),
 
-  eventIsNextWeek: (event: Event | any): boolean =>
+  nextWeek: (event: Event | any): boolean =>
+    moment(event.start).isAfter(tomorrow.endOf('day')) &&
     moment(event.start).isBetween(
       moment().endOf('week'),
       moment().add(1, 'w').endOf('week')
     ),
 
-  eventIsThisMonth: (event: Event | any): boolean =>
+  thisMonth: (event: Event | any): boolean =>
     moment(event.start).isBetween(
       moment().add(1, 'w').endOf('week'),
       moment().endOf('month')
     ),
 
-  eventIsAfterThisMonth: (event: Event | any): boolean =>
-    moment(event.start).isAfter(moment().endOf('month'))
+  next: (event: Event | any): boolean =>
+    moment(event.start).isAfter(moment().endOf('month')) &&
+    moment(event.start).isAfter(moment().add(1, 'w').endOf('week'))
 };
 
-export { capitalize, addEventToCalendar, openUrl, eventDateUtils };
+export { capitalize, addEventToCalendar, openUrl, eventDateSections };

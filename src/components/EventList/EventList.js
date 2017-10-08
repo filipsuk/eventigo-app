@@ -10,7 +10,7 @@ import {
 import { Icon } from 'react-native-elements';
 import EventCard from '../../components/EventCard';
 import { colors, fontSizes } from '../../styles';
-import { eventDateUtils } from '../../utils';
+import { eventDateSections } from '../../utils';
 import type { Event } from '../../types/model';
 import type { EventsState } from '../../reducers/events';
 import type { BookmarksState } from '../../reducers/bookmarks';
@@ -49,29 +49,27 @@ const EventList = ({
     const eventsArr = Object.values(eventsState.data);
     const sections = [
       {
-        data: eventsArr.filter(event => eventDateUtils.eventIsToday(event)),
+        data: eventsArr.filter(event => eventDateSections.today(event)),
         key: 'Dnes'
       },
       {
-        data: eventsArr.filter(event => eventDateUtils.eventIsTomorrow(event)),
+        data: eventsArr.filter(event => eventDateSections.tomorrow(event)),
         key: 'Zítra'
       },
       {
-        data: eventsArr.filter(event => eventDateUtils.eventIsThisWeek(event)),
+        data: eventsArr.filter(event => eventDateSections.thisWeek(event)),
         key: 'Tento týden'
       },
       {
-        data: eventsArr.filter(event => eventDateUtils.eventIsNextWeek(event)),
+        data: eventsArr.filter(event => eventDateSections.nextWeek(event)),
         key: 'Příští týden'
       },
       {
-        data: eventsArr.filter(event => eventDateUtils.eventIsThisMonth(event)),
+        data: eventsArr.filter(event => eventDateSections.thisMonth(event)),
         key: 'Tento měsíc'
       },
       {
-        data: eventsArr.filter(event =>
-          eventDateUtils.eventIsAfterThisMonth(event)
-        ),
+        data: eventsArr.filter(event => eventDateSections.next(event)),
         key: 'Další'
       }
     ];
